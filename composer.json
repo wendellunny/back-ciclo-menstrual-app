@@ -1,0 +1,17 @@
+{
+    "name": "lunny/back-app-ciclo-menstrual",
+    "description": "Backend da aplicação de calendário de ciclo menstrual",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "CicloMenstrual\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "wendellunny",
+            "email": "wendelferreiraportugal@gmail.com"
+        }
+    ],
+    "require": {}
+}
