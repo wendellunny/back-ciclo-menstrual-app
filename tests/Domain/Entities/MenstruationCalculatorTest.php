@@ -2,6 +2,7 @@
 
 namespace Tests\Domain\Entities;
 
+use CicloMenstrual\Domain\Entities\Data\Menstruation;
 use CicloMenstrual\Domain\Entities\MenstruationCalculator;
 use DateInterval;
 use DateTime;
@@ -34,9 +35,10 @@ class MenstruationCalculatorTest extends TestCase
         $date = new DateTime();
         $dateInterval = DateInterval::createFromDateString('5 days');
 
-        $expect = [
-            'final_date' => $date->add($dateInterval)
-        ];
+        $expect = new Menstruation(
+            $date,
+            $date->add($dateInterval)
+        );
 
         $result = $this->instance->calculate($date);
 
