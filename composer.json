@@ -4,7 +4,8 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "CicloMenstrual\\": "src/"
+            "CicloMenstrual\\": "src/",
+            "Tests\\": "tests/"
         }
     },
     "authors": [
@@ -13,5 +14,7 @@
             "email": "wendelferreiraportugal@gmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpunit/phpunit": "^10"
+    }
 }

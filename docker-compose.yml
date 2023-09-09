@@ -5,5 +5,5 @@ services:
           build: ./.docker/php
           working_dir: /var/www/html
           volumes:
-              - './src:/var/www/html'
+              - '.:/var/www/html'
               - './.docker/php/php-ini-overrides.ini:/etc/php/8.2/fpm/conf.d/99-overrides.ini'
