@@ -4,22 +4,23 @@ namespace CicloMenstrual\Domain\Entities\Data;
 
 use CicloMenstrual\Domain\Api\Entities\Data\MenstruationInterface;
 use DateTime;
+use DateTimeImmutable;
 
 class Menstruation implements MenstruationInterface
 {
     public function __construct(
-        private ?DateTime $initialDate = null,
-        private ?DateTime $endDate = null
+        private ?DateTimeImmutable $initialDate = null,
+        private ?DateTimeImmutable $endDate = null
     ) {
     }
 
     /**
      * Set initial date
      *
-     * @param DateTime $initialDate
+     * @param DateTimeImmutable $initialDate
      * @return self
      */
-    public function setInitialDate(DateTime $initialDate): self
+    public function setInitialDate(DateTimeImmutable $initialDate): self
     {
         $this->initialDate = $initialDate;
         return $this;
@@ -28,9 +29,9 @@ class Menstruation implements MenstruationInterface
     /**
      * Get initial date
      *
-     * @return DateTime
+     * @return DateTimeImmutable
      */
-    public function getInitialDate(): DateTime
+    public function getInitialDate(): DateTimeImmutable
     {
         return $this->initialDate;
     }
@@ -38,10 +39,10 @@ class Menstruation implements MenstruationInterface
     /**
      * Set end date
      *
-     * @param DateTime $endDate
+     * @param DateTimeImmutable $endDate
      * @return self
      */
-    public function setEndDate(DateTime $endDate): self
+    public function setEndDate(DateTimeImmutable $endDate): self
     {
         $this->endDate = $endDate;
         return $this;
@@ -50,9 +51,9 @@ class Menstruation implements MenstruationInterface
     /**
      * Get end date
      *
-     * @return DateTime
+     * @return DateTimeImmutable
      */
-    public function getEndDate(): DateTime
+    public function getEndDate(): DateTimeImmutable
     {
         return $this->endDate;
     }

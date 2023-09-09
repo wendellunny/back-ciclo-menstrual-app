@@ -5,7 +5,7 @@ namespace Tests\Domain\Entities;
 use CicloMenstrual\Domain\Entities\Data\Menstruation;
 use CicloMenstrual\Domain\Entities\MenstruationCalculator;
 use DateInterval;
-use DateTime;
+use DateTimeImmutable;
 use PHPUnit\Framework\TestCase;
 
 class MenstruationCalculatorTest extends TestCase
@@ -32,14 +32,14 @@ class MenstruationCalculatorTest extends TestCase
      */
     public function testCalculate(): void
     {
-        $date = new DateTime();
+        $date = new DateTimeImmutable();
         $dateInterval = DateInterval::createFromDateString('5 days');
 
         $expect = new Menstruation(
             $date,
             $date->add($dateInterval)
         );
-
+        
         $result = $this->instance->calculate($date);
 
         $this->assertEquals($expect, $result);

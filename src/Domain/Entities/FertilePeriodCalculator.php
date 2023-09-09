@@ -15,12 +15,13 @@ class FertilePeriodCalculator
      */
     public function calculate(MenstruationInterface $menstruation): array
     {
-        $initalDate = $menstruation->getInitialDate();
-        $dateInterval = DateInterval::createFromDateString('14 days');
-        $endDate = $initalDate->add($dateInterval);
+        $initialDateInterval = DateInterval::createFromDateString('14 days');
+        $initialDate = $menstruation->getInitialDate()->add($initialDateInterval);
+        $endDateInterval = DateInterval::createFromDateString('5 days');
+        $endDate = $initialDate->add($endDateInterval);
 
         return [
-            'initial_date' => $initalDate,
+            'initial_date' => $initialDate,
             'end_date' => $endDate
         ];
     }

@@ -3,6 +3,7 @@
 namespace CicloMenstrual\Domain\Api\Entities\Data;
 
 use DateTime;
+use DateTimeImmutable;
 
 interface MenstruationInterface
 {
@@ -12,14 +13,14 @@ interface MenstruationInterface
      * @param DateTime $initialDate
      * @return self
      */
-    public function setInitialDate(DateTime $initialDate): self;
+    public function setInitialDate(DateTimeImmutable $initialDate): self;
 
     /**
      * Get initial date
      *
      * @return DateTime
      */
-    public function getInitialDate(): DateTime;
+    public function getInitialDate(): DateTimeImmutable;
 
     /**
      * Set end date
@@ -27,12 +28,12 @@ interface MenstruationInterface
      * @param DateTime $endDate
      * @return self
      */
-    public function setEndDate(DateTime $endDate): self;
+    public function setEndDate(DateTimeImmutable $endDate): self;
 
     /**
      * Get end date
      *
      * @return DateTime
      */
-    public function getEndDate(): DateTime;
+    public function getEndDate(): DateTimeImmutable;
 }
