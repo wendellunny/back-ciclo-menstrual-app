@@ -4,11 +4,16 @@ namespace CicloMenstrual\Domain\Entities;
 
 use CicloMenstrual\Domain\Api\Entities\Data\FertilePeriodInterface;
 use CicloMenstrual\Domain\Api\Entities\Data\MenstruationInterface;
+use CicloMenstrual\Domain\Entities\Data\Factories\FertilePeriodFactory;
 use CicloMenstrual\Domain\Entities\Data\FertilePeriod;
 use DateInterval;
 
 class FertilePeriodCalculator
 {
+    public function __construct(private FertilePeriodFactory $fertilePeriodFactory)
+    {
+    }
+
     /**
      * Calculate
      *
@@ -22,6 +27,6 @@ class FertilePeriodCalculator
         $endDateInterval = DateInterval::createFromDateString('5 days');
         $endDate = $initialDate->add($endDateInterval);
 
-        return new FertilePeriod($initialDate, $endDate);
+        return $this->fertilePeriodFactory->create([$initialDate, $endDate]);
     }
 }
