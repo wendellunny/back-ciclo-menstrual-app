@@ -4,7 +4,7 @@ namespace CicloMenstrual\Domain\Api\Entities\Data;
 
 use DateTimeImmutable;
 
-interface MenstruationInterface
+interface FertilePeriodInterface
 {
     /**
      * Set initial date

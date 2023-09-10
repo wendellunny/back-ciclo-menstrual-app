@@ -2,7 +2,9 @@
 
 namespace CicloMenstrual\Domain\Entities;
 
+use CicloMenstrual\Domain\Api\Entities\Data\FertilePeriodInterface;
 use CicloMenstrual\Domain\Api\Entities\Data\MenstruationInterface;
+use CicloMenstrual\Domain\Entities\Data\FertilePeriod;
 use DateInterval;
 
 class FertilePeriodCalculator
@@ -11,18 +13,15 @@ class FertilePeriodCalculator
      * Calculate
      *
      * @param MenstruationInterface $menstruation
-     * @return array
+     * @return FertilePeriodInterface
      */
-    public function calculate(MenstruationInterface $menstruation): array
+    public function calculate(MenstruationInterface $menstruation): FertilePeriodInterface
     {
         $initialDateInterval = DateInterval::createFromDateString('14 days');
         $initialDate = $menstruation->getInitialDate()->add($initialDateInterval);
         $endDateInterval = DateInterval::createFromDateString('5 days');
         $endDate = $initialDate->add($endDateInterval);
 
-        return [
-            'initial_date' => $initialDate,
-            'end_date' => $endDate
-        ];
+        return new FertilePeriod($initialDate, $endDate);
     }
 }

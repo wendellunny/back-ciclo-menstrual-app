@@ -3,6 +3,7 @@
 namespace Tests\Domain\Entities\Domain;
 
 use CicloMenstrual\Domain\Api\Entities\Data\MenstruationInterface;
+use CicloMenstrual\Domain\Entities\Data\FertilePeriod;
 use CicloMenstrual\Domain\Entities\FertilePeriodCalculator;
 use DateInterval;
 use DateTimeImmutable;
@@ -31,10 +32,10 @@ class FertilePeriodCalculatorTest extends TestCase
         $initialDate = $initialDateMenstruation->add($initialDateInterval);
         $endDateInterval = DateInterval::createFromDateString('5 days');
 
-        $expect = [
-            'initial_date' => $initialDate,
-            'end_date' => $initialDate->add($endDateInterval)
-        ];
+        $expect = new FertilePeriod(
+            $initialDate,
+            $initialDate->add($endDateInterval)
+        );
 
         $this->menstruation
             ->expects($this->once())
