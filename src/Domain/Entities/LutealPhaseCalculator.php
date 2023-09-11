@@ -15,8 +15,10 @@ class LutealPhaseCalculator
     
     public function calculate(FertilePeriodInterface $fertilePeriod): LutealPhaseInterface
     {
-        $initialDate = $fertilePeriod->getEndDate();
-        
+        $initialDate = $fertilePeriod->getEndDate()->add(
+            DateInterval::createFromDateString('1 day')
+        );
+
         $endDate = $initialDate->add(
             DateInterval::createFromDateString('9 days')
         );
