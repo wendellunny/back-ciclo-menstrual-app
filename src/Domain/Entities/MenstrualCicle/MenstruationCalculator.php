@@ -17,7 +17,7 @@ class MenstruationCalculator
      * Calculate menstruation day
      *
      * @param integer $initialDay
-     * @return array
+     * @return MenstruationInterface
      */
     public function calculate(DateTimeImmutable $initialDate): MenstruationInterface
     {

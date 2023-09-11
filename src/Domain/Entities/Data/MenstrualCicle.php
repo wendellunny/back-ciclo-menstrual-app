@@ -9,21 +9,13 @@ use CicloMenstrual\Domain\Api\Entities\Data\MenstrualCicleInterface;
 
 class MenstrualCicle implements MenstrualCicleInterface
 {
-    /**
-     * @var MenstruationInterface
-     */
-    private MenstruationInterface $menstruation;
-
-    /**
-     * @var FertilePeriodInterface
-     */
-    private FertilePeriodInterface $fertilePeriod;
-
-    /**
-     * @var LutealPhaseInterface
-     */
-    private LutealPhaseInterface $lutealPhase;
-
+    
+    public function __construct(
+        private MenstruationInterface $menstruation,
+        private FertilePeriodInterface $fertilePeriod,
+        private LutealPhaseInterface $lutealPhase
+    ){
+    }
     /**
      * Set Menstruation
      *
