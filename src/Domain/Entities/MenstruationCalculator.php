@@ -4,7 +4,6 @@ namespace CicloMenstrual\Domain\Entities;
 
 use CicloMenstrual\Domain\Api\Entities\Data\MenstruationInterface;
 use CicloMenstrual\Domain\Entities\Data\Factories\MenstruationFactory;
-use CicloMenstrual\Domain\Entities\Data\Menstruation;
 use DateInterval;
 use DateTimeImmutable;
 
@@ -22,8 +21,9 @@ class MenstruationCalculator
      */
     public function calculate(DateTimeImmutable $initialDate): MenstruationInterface
     {
-        $dateInterval = DateInterval::createFromDateString('5 days');
-        $endDate = $initialDate->add($dateInterval);
+        $endDate = $initialDate->add(
+            DateInterval::createFromDateString('5 days')
+        );
 
         return $this->menstruationFactory->create([$initialDate,$endDate]);
     }
