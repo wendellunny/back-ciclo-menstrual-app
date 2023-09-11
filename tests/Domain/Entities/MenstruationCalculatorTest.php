@@ -2,10 +2,9 @@
 
 namespace Tests\Domain\Entities;
 
-use CicloMenstrual\Domain\Api\Entities\Data\MenstruationInterface;
-use CicloMenstrual\Domain\Entities\Data\Factories\MenstruationFactory;
-use CicloMenstrual\Domain\Entities\Data\Menstruation;
-use CicloMenstrual\Domain\Entities\MenstruationCalculator;
+use CicloMenstrual\Domain\Api\Entities\Data\MenstrualCicle\MenstruationInterface;
+use CicloMenstrual\Domain\Entities\Data\MenstrualCicle\Factories\MenstruationFactory;
+use CicloMenstrual\Domain\Entities\MenstrualCicle\MenstruationCalculator;
 use DateInterval;
 use DateTimeImmutable;
 use PHPUnit\Framework\TestCase;

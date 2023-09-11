@@ -1,10 +1,10 @@
 <?php
 
-namespace CicloMenstrual\Domain\Entities;
+namespace CicloMenstrual\Domain\Entities\MenstrualCicle;
 
-use CicloMenstrual\Domain\Api\Entities\Data\FertilePeriodInterface;
-use CicloMenstrual\Domain\Api\Entities\Data\LutealPhaseInterface;
-use CicloMenstrual\Domain\Entities\Data\Factories\LutealPhaseFactory;
+use CicloMenstrual\Domain\Api\Entities\Data\MenstrualCicle\FertilePeriodInterface;
+use CicloMenstrual\Domain\Api\Entities\Data\MenstrualCicle\LutealPhaseInterface;
+use CicloMenstrual\Domain\Entities\Data\MenstrualCicle\Factories\LutealPhaseFactory;
 use DateInterval;
 
 class LutealPhaseCalculator

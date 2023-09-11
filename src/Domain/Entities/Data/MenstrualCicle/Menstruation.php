@@ -1,8 +1,8 @@
 <?php
 
-namespace CicloMenstrual\Domain\Entities\Data;
+namespace CicloMenstrual\Domain\Entities\Data\MenstrualCicle;
 
-use CicloMenstrual\Domain\Api\Entities\Data\MenstruationInterface;
+use CicloMenstrual\Domain\Api\Entities\Data\MenstrualCicle\MenstruationInterface;
 use DateTime;
 use DateTimeImmutable;
 

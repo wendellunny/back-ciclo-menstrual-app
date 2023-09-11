@@ -1,9 +1,9 @@
 <?php
 
-namespace CicloMenstrual\Domain\Entities\Data\Factories;
+namespace CicloMenstrual\Domain\Entities\Data\MenstrualCicle\Factories;
 
 use CicloMenstrual\Domain\Api\FactoryInterface;
-use CicloMenstrual\Domain\Entities\Data\FertilePeriod;
+use CicloMenstrual\Domain\Entities\Data\MenstrualCicle\FertilePeriod;
 
 class FertilePeriodFactory implements FactoryInterface
 {
