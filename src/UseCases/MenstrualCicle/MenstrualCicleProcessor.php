@@ -16,7 +16,6 @@ class MenstrualCicleProcessor
         private MenstruationCalculator $menstruationCalculator,
         private FertilePeriodCalculator $fertilePeriodCalculator,
         private LutealPhaseCalculator $lutealPhaseCalculator
-
     ) {
     }
     /**

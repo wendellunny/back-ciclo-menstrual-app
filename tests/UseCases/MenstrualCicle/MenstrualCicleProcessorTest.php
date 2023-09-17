@@ -26,6 +26,11 @@ class MenstrualCicleProcessorTest extends TestCase
     private LutealPhaseInterface $lutealPhaseMock;
     private MenstrualCicleInterface $menstrualCicleMock;
 
+    /**
+     * Set up method
+     *
+     * @return void
+     */
     public function setUp(): void
     {
         $this->menstrualCicleFactoryMock = $this->createMock(MenstrualCicleFactory::class);
