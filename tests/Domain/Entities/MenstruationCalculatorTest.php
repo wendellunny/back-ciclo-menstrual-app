@@ -7,6 +7,7 @@ use CicloMenstrual\Domain\Entities\Data\MenstrualCicle\Factories\MenstruationFac
 use CicloMenstrual\Domain\Entities\MenstrualCicle\MenstruationCalculator;
 use DateInterval;
 use DateTimeImmutable;
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
 class MenstruationCalculatorTest extends TestCase
@@ -16,9 +17,9 @@ class MenstruationCalculatorTest extends TestCase
      */
     private MenstruationCalculator $instance;
 
-    private MenstruationFactory $menstruationFactoryMock;
+    private MockObject|MenstruationFactory $menstruationFactoryMock;
 
-    private MenstruationInterface $menstruationMock;
+    private MockObject|MenstruationInterface $menstruationMock;
     
     /**
      * Setup method

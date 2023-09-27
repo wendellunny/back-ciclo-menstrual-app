@@ -12,19 +12,20 @@ use CicloMenstrual\Domain\Entities\MenstrualCicle\LutealPhaseCalculator;
 use CicloMenstrual\Domain\Entities\MenstrualCicle\MenstruationCalculator;
 use CicloMenstrual\UseCases\MenstrualCicle\MenstrualCicleProcessor;
 use DateTimeImmutable;
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
 class MenstrualCicleProcessorTest extends TestCase
 {
     private MenstrualCicleProcessor $instance;
-    private MenstrualCicleFactory $menstrualCicleFactoryMock;
-    private MenstruationCalculator $menstruationCalculatorMock;
-    private FertilePeriodCalculator $fertilePeriodCalculatorMock;
-    private LutealPhaseCalculator $lutealPhaseCalculatorMock;
-    private MenstruationInterface $menstruationMock;
-    private FertilePeriodInterface $fertilPeriodMock;
-    private LutealPhaseInterface $lutealPhaseMock;
-    private MenstrualCicleInterface $menstrualCicleMock;
+    private MockObject|MenstrualCicleFactory $menstrualCicleFactoryMock;
+    private MockObject|MenstruationCalculator $menstruationCalculatorMock;
+    private MockObject|FertilePeriodCalculator $fertilePeriodCalculatorMock;
+    private MockObject|LutealPhaseCalculator $lutealPhaseCalculatorMock;
+    private MockObject|MenstruationInterface $menstruationMock;
+    private MockObject|FertilePeriodInterface $fertilPeriodMock;
+    private MockObject|LutealPhaseInterface $lutealPhaseMock;
+    private MockObject|MenstrualCicleInterface $menstrualCicleMock;
 
     /**
      * Set up method

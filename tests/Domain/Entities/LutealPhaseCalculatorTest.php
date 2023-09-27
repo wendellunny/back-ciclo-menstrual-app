@@ -8,13 +8,14 @@ use CicloMenstrual\Domain\Entities\Data\MenstrualCicle\FertilePeriod;
 use CicloMenstrual\Domain\Entities\MenstrualCicle\LutealPhaseCalculator;
 use DateInterval;
 use DateTimeImmutable;
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
 class LutealPhaseCalculatorTest extends TestCase
 {
-    private LutealPhaseFactory $lutealPhaseFactoryMock;
-    private LutealPhaseInterface $lutealPhaseMock;
-    private FertilePeriod $fertilePeriodMock;
+    private MockObject|LutealPhaseFactory $lutealPhaseFactoryMock;
+    private MockObject|LutealPhaseInterface $lutealPhaseMock;
+    private MockObject|FertilePeriod $fertilePeriodMock;
     private LutealPhaseCalculator $instance;
 
     public function setUp(): void

@@ -10,15 +10,16 @@ use CicloMenstrual\UseCases\MenstrualCicle\MenstrualCicleProcessor;
 use CicloMenstrual\UseCases\MenstrualCicle\PeriodProcessor;
 use DateInterval;
 use DateTimeImmutable;
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
 class PeriodProcessorTest extends TestCase
 {
     private PeriodProcessor $instance;
-    private MenstrualCicleProcessor $menstrualCicleProcessorMock;
-    private PeriodInterface $periodMock;
-    private MenstrualCicleInterface $menstrualCicleMock;
-    private LutealPhaseInterface $lutealPhaseMock;
+    private MockObject|MenstrualCicleProcessor $menstrualCicleProcessorMock;
+    private MockObject|PeriodInterface $periodMock;
+    private MockObject|MenstrualCicleInterface $menstrualCicleMock;
+    private MockObject|LutealPhaseInterface $lutealPhaseMock;
 
     /**
      * Set up method
@@ -29,7 +30,6 @@ class PeriodProcessorTest extends TestCase
     {
         $this->menstrualCicleProcessorMock = $this->createMock(MenstrualCicleProcessor::class);
         $this->periodMock = $this->createMock(Period::class);
-        $this->dateIntervalMock = $this->createMock(DateInterval::class);
         $this->menstrualCicleMock = $this->createMock(MenstrualCicleInterface::class);
         $this->lutealPhaseMock = $this->createMock(LutealPhaseInterface::class);
         $this->instance = new PeriodProcessor($this->menstrualCicleProcessorMock);

@@ -8,14 +8,15 @@ use CicloMenstrual\Domain\Entities\Data\MenstrualCicle\Factories\FertilePeriodFa
 use CicloMenstrual\Domain\Entities\MenstrualCicle\FertilePeriodCalculator;
 use DateInterval;
 use DateTimeImmutable;
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
 class FertilePeriodCalculatorTest extends TestCase
 {
     private FertilePeriodCalculator $instance;
-    private MenstruationInterface $menstruationMock;
-    private FertilePeriodFactory $fertilePeriodFactoryMock;
-    private FertilePeriodInterface $fertilePeriodMock;
+    private MockObject|MenstruationInterface $menstruationMock;
+    private MockObject|FertilePeriodFactory $fertilePeriodFactoryMock;
+    private MockObject|FertilePeriodInterface $fertilePeriodMock;
 
     public function setUp(): void
     {

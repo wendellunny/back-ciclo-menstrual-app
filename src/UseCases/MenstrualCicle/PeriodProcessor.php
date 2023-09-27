@@ -3,10 +3,11 @@
 namespace CicloMenstrual\UseCases\MenstrualCicle;
 
 use CicloMenstrual\UseCases\Api\MenstrualCicle\Data\PeriodInterface;
+use CicloMenstrual\UseCases\Api\MenstrualCicle\PeriodProcessorInterface;
 use DateInterval;
 use DateTimeImmutable;
 
-class PeriodProcessor
+class PeriodProcessor implements PeriodProcessorInterface
 {
     public function  __construct(private MenstrualCicleProcessor $menstrualCicleProcessor)
     {
