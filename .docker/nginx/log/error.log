@@ -1,0 +1,191 @@
+2023/10/05 02:13:49 [error] 29#29: *1 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected token "return" in /var/www/html/src/Infrastructure/Gateways/Route.php on line 42" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:14:37 [error] 29#29: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function CicloMenstrual\Infrastructure\Gateways\Route::CicloMenstrual\Infrastructure\Gateways\{closure}(), 1 passed in /var/www/html/src/Infrastructure/Gateways/Route.php on line 71 and exactly 2 expected in /var/www/html/src/Infrastructure/Gateways/Route.php:39
+Stack trace:
+#0 /var/www/html/src/Infrastructure/Gateways/Route.php(71): CicloMenstrual\Infrastructure\Gateways\Route->CicloMenstrual\Infrastructure\Gateways\{closure}()
+#1 /var/www/html/src/Infrastructure/ServiceProviders/Router.php(31): CicloMenstrual\Infrastructure\Gateways\Route->match()
+#2 /var/www/html/src/Infrastructure/Main/App.php(25): CicloMenstrual\Infrastructure\ServiceProviders\Router->handle()
+#3 /var/www/html/public/index.php(71): CicloMenstrual\Infrastructure\Main\App->start()
+#4 {main}
+  thrown in /var/www/html/src/Infrastructure/Gateways/Route.php on line 39" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /home HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:14:37 [error] 29#29: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function CicloMenstrual\Infrastructure\Gateways\Route::CicloMenstrual\Infrastructure\Gateways\{closure}(), 1 passed in /var/www/html/src/Infrastructure/Gateways/Route.php on line 71 and exactly 2 expected in /var/www/html/src/Infrastructure/Gateways/Route.php:39
+Stack trace:
+#0 /var/www/html/src/Infrastructure/Gateways/Route.php(71): CicloMenstrual\Infrastructure\Gateways\Route->CicloMenstrual\Infrastructure\Gateways\{closure}()
+#1 /var/www/html/src/Infrastructure/ServiceProviders/Router.php(31): CicloMenstrual\Infrastructure\Gateways\Route->match()
+#2 /var/www/html/src/Infrastructure/Main/App.php(25): CicloMenstrual\Infrastructure\ServiceProviders\Router->handle()
+#3 /var/www/html/public/index.php(71): CicloMenstrual\Infrastructure\Main\App->start()
+#4 {main}
+  thrown in /var/www/html/src/Infrastructure/Gateways/Route.php on line 39" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /home HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:16:46 [error] 33#33: *15 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to a member function getHeaders() on string in /var/www/html/src/Infrastructure/Gateways/Route.php:73
+Stack trace:
+#0 /var/www/html/src/Infrastructure/ServiceProviders/Router.php(31): CicloMenstrual\Infrastructure\Gateways\Route->match()
+#1 /var/www/html/src/Infrastructure/Main/App.php(25): CicloMenstrual\Infrastructure\ServiceProviders\Router->handle()
+#2 /var/www/html/public/index.php(71): CicloMenstrual\Infrastructure\Main\App->start()
+#3 {main}
+  thrown in /var/www/html/src/Infrastructure/Gateways/Route.php on line 73" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /home HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:17:26 [error] 33#33: *15 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined method CicloMenstrual\Infrastructure\Gateways\Route::getHeaders() in /var/www/html/src/Infrastructure/Gateways/Route.php:73
+Stack trace:
+#0 /var/www/html/src/Infrastructure/ServiceProviders/Router.php(31): CicloMenstrual\Infrastructure\Gateways\Route->match()
+#1 /var/www/html/src/Infrastructure/Main/App.php(25): CicloMenstrual\Infrastructure\ServiceProviders\Router->handle()
+#2 /var/www/html/public/index.php(71): CicloMenstrual\Infrastructure\Main\App->start()
+#3 {main}
+  thrown in /var/www/html/src/Infrastructure/Gateways/Route.php on line 73" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /home HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:17:51 [error] 33#33: *15 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to a member function getHeaders() on null in /var/www/html/src/Infrastructure/Gateways/Route.php:73
+Stack trace:
+#0 /var/www/html/src/Infrastructure/ServiceProviders/Router.php(31): CicloMenstrual\Infrastructure\Gateways\Route->match()
+#1 /var/www/html/src/Infrastructure/Main/App.php(25): CicloMenstrual\Infrastructure\ServiceProviders\Router->handle()
+#2 /var/www/html/public/index.php(71): CicloMenstrual\Infrastructure\Main\App->start()
+#3 {main}
+  thrown in /var/www/html/src/Infrastructure/Gateways/Route.php on line 73" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /home HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:17:51 [error] 33#33: *15 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to a member function getHeaders() on null in /var/www/html/src/Infrastructure/Gateways/Route.php:73
+Stack trace:
+#0 /var/www/html/src/Infrastructure/ServiceProviders/Router.php(31): CicloMenstrual\Infrastructure\Gateways\Route->match()
+#1 /var/www/html/src/Infrastructure/Main/App.php(25): CicloMenstrual\Infrastructure\ServiceProviders\Router->handle()
+#2 /var/www/html/public/index.php(71): CicloMenstrual\Infrastructure\Main\App->start()
+#3 {main}
+  thrown in /var/www/html/src/Infrastructure/Gateways/Route.php on line 73" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /home HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:17:52 [error] 33#33: *15 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to a member function getHeaders() on null in /var/www/html/src/Infrastructure/Gateways/Route.php:73
+Stack trace:
+#0 /var/www/html/src/Infrastructure/ServiceProviders/Router.php(31): CicloMenstrual\Infrastructure\Gateways\Route->match()
+#1 /var/www/html/src/Infrastructure/Main/App.php(25): CicloMenstrual\Infrastructure\ServiceProviders\Router->handle()
+#2 /var/www/html/public/index.php(71): CicloMenstrual\Infrastructure\Main\App->start()
+#3 {main}
+  thrown in /var/www/html/src/Infrastructure/Gateways/Route.php on line 73" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /home HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:17:52 [error] 33#33: *15 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to a member function getHeaders() on null in /var/www/html/src/Infrastructure/Gateways/Route.php:73
+Stack trace:
+#0 /var/www/html/src/Infrastructure/ServiceProviders/Router.php(31): CicloMenstrual\Infrastructure\Gateways\Route->match()
+#1 /var/www/html/src/Infrastructure/Main/App.php(25): CicloMenstrual\Infrastructure\ServiceProviders\Router->handle()
+#2 /var/www/html/public/index.php(71): CicloMenstrual\Infrastructure\Main\App->start()
+#3 {main}
+  thrown in /var/www/html/src/Infrastructure/Gateways/Route.php on line 73" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /home HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:17:52 [error] 33#33: *15 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to a member function getHeaders() on null in /var/www/html/src/Infrastructure/Gateways/Route.php:73
+Stack trace:
+#0 /var/www/html/src/Infrastructure/ServiceProviders/Router.php(31): CicloMenstrual\Infrastructure\Gateways\Route->match()
+#1 /var/www/html/src/Infrastructure/Main/App.php(25): CicloMenstrual\Infrastructure\ServiceProviders\Router->handle()
+#2 /var/www/html/public/index.php(71): CicloMenstrual\Infrastructure\Main\App->start()
+#3 {main}
+  thrown in /var/www/html/src/Infrastructure/Gateways/Route.php on line 73" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /home HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:25:18 [error] 29#29: *31 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function {closure}(), 1 passed in /var/www/html/public/index.php on line 57 and exactly 2 expected in /var/www/html/public/index.php:34
+Stack trace:
+#0 /var/www/html/public/index.php(57): {closure}()
+#1 {main}
+  thrown in /var/www/html/public/index.php on line 34" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:43:30 [error] 29#29: *35 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Object of class Closure could not be converted to string in /var/www/html/vendor/aura/router/src/Route.php:461
+Stack trace:
+#0 /var/www/html/vendor/aura/router/src/Map.php(216): Aura\Router\Route->path()
+#1 /var/www/html/vendor/aura/router/src/Map.php(241): Aura\Router\Map->route()
+#2 /var/www/html/public/index.php(34): Aura\Router\Map->get()
+#3 {main}
+  thrown in /var/www/html/vendor/aura/router/src/Route.php on line 461" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:43:31 [error] 29#29: *35 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Object of class Closure could not be converted to string in /var/www/html/vendor/aura/router/src/Route.php:461
+Stack trace:
+#0 /var/www/html/vendor/aura/router/src/Map.php(216): Aura\Router\Route->path()
+#1 /var/www/html/vendor/aura/router/src/Map.php(241): Aura\Router\Map->route()
+#2 /var/www/html/public/index.php(34): Aura\Router\Map->get()
+#3 {main}
+  thrown in /var/www/html/vendor/aura/router/src/Route.php on line 461" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:43:31 [error] 29#29: *35 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Object of class Closure could not be converted to string in /var/www/html/vendor/aura/router/src/Route.php:461
+Stack trace:
+#0 /var/www/html/vendor/aura/router/src/Map.php(216): Aura\Router\Route->path()
+#1 /var/www/html/vendor/aura/router/src/Map.php(241): Aura\Router\Map->route()
+#2 /var/www/html/public/index.php(34): Aura\Router\Map->get()
+#3 {main}
+  thrown in /var/www/html/vendor/aura/router/src/Route.php on line 461" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:43:31 [error] 29#29: *35 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Object of class Closure could not be converted to string in /var/www/html/vendor/aura/router/src/Route.php:461
+Stack trace:
+#0 /var/www/html/vendor/aura/router/src/Map.php(216): Aura\Router\Route->path()
+#1 /var/www/html/vendor/aura/router/src/Map.php(241): Aura\Router\Map->route()
+#2 /var/www/html/public/index.php(34): Aura\Router\Map->get()
+#3 {main}
+  thrown in /var/www/html/vendor/aura/router/src/Route.php on line 461" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:43:31 [error] 29#29: *35 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Object of class Closure could not be converted to string in /var/www/html/vendor/aura/router/src/Route.php:461
+Stack trace:
+#0 /var/www/html/vendor/aura/router/src/Map.php(216): Aura\Router\Route->path()
+#1 /var/www/html/vendor/aura/router/src/Map.php(241): Aura\Router\Map->route()
+#2 /var/www/html/public/index.php(34): Aura\Router\Map->get()
+#3 {main}
+  thrown in /var/www/html/vendor/aura/router/src/Route.php on line 461" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:43:39 [error] 29#29: *35 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Object of class Closure could not be converted to string in /var/www/html/vendor/aura/router/src/Route.php:461
+Stack trace:
+#0 /var/www/html/vendor/aura/router/src/Map.php(216): Aura\Router\Route->path()
+#1 /var/www/html/vendor/aura/router/src/Map.php(241): Aura\Router\Map->route()
+#2 /var/www/html/public/index.php(34): Aura\Router\Map->get()
+#3 {main}
+  thrown in /var/www/html/vendor/aura/router/src/Route.php on line 461" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:43:39 [error] 29#29: *35 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Object of class Closure could not be converted to string in /var/www/html/vendor/aura/router/src/Route.php:461
+Stack trace:
+#0 /var/www/html/vendor/aura/router/src/Map.php(216): Aura\Router\Route->path()
+#1 /var/www/html/vendor/aura/router/src/Map.php(241): Aura\Router\Map->route()
+#2 /var/www/html/public/index.php(34): Aura\Router\Map->get()
+#3 {main}
+  thrown in /var/www/html/vendor/aura/router/src/Route.php on line 461" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:43:40 [error] 29#29: *35 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Object of class Closure could not be converted to string in /var/www/html/vendor/aura/router/src/Route.php:461
+Stack trace:
+#0 /var/www/html/vendor/aura/router/src/Map.php(216): Aura\Router\Route->path()
+#1 /var/www/html/vendor/aura/router/src/Map.php(241): Aura\Router\Map->route()
+#2 /var/www/html/public/index.php(34): Aura\Router\Map->get()
+#3 {main}
+  thrown in /var/www/html/vendor/aura/router/src/Route.php on line 461" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:45:44 [error] 29#29: *45 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught RuntimeException: Stream is not writable in /var/www/html/vendor/zendframework/zend-diactoros/src/Stream.php:211
+Stack trace:
+#0 /var/www/html/public/index.php(35): Zend\Diactoros\Stream->write()
+#1 /var/www/html/public/index.php(57): {closure}()
+#2 {main}
+  thrown in /var/www/html/vendor/zendframework/zend-diactoros/src/Stream.php on line 211" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:47:01 [error] 29#29: *50 FastCGI sent in stderr: "PHP message: PHP Warning:  Undefined property: Zend\Diactoros\ServerRequest::$hadler in /var/www/html/public/index.php on line 35" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:48:07 [error] 29#29: *53 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Aura\Router\Route does not have a method "getHeaders" in /var/www/html/vendor/aura/router/src/Map.php:100
+Stack trace:
+#0 /var/www/html/vendor/aura/router/src/Map.php(100): call_user_func_array()
+#1 /var/www/html/public/index.php(60): Aura\Router\Map->__call()
+#2 {main}
+  thrown in /var/www/html/vendor/aura/router/src/Map.php on line 100" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:48:14 [error] 29#29: *53 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined method Zend\Diactoros\ServerRequest::getStatusCode() in /var/www/html/public/index.php:65
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/public/index.php on line 65" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:48:15 [error] 29#29: *53 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined method Zend\Diactoros\ServerRequest::getStatusCode() in /var/www/html/public/index.php:65
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/public/index.php on line 65" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:48:15 [error] 29#29: *53 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined method Zend\Diactoros\ServerRequest::getStatusCode() in /var/www/html/public/index.php:65
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/public/index.php on line 65" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:48:28 [error] 29#29: *53 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined method Zend\Diactoros\ServerRequest::getStatusCode() in /var/www/html/public/index.php:65
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/public/index.php on line 65" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:51:10 [error] 29#29: *61 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function {closure}(), 1 passed in /var/www/html/public/index.php on line 58 and exactly 2 expected in /var/www/html/public/index.php:34
+Stack trace:
+#0 /var/www/html/public/index.php(58): {closure}()
+#1 {main}
+  thrown in /var/www/html/public/index.php on line 34" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:51:26 [error] 29#29: *61 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function menstrual-calender.get() in /var/www/html/public/index.php:55
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/public/index.php on line 55" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:51:27 [error] 29#29: *61 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function menstrual-calender.get() in /var/www/html/public/index.php:55
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/public/index.php on line 55" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:51:27 [error] 29#29: *61 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function menstrual-calender.get() in /var/www/html/public/index.php:55
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/public/index.php on line 55" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:51:27 [error] 29#29: *61 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function menstrual-calender.get() in /var/www/html/public/index.php:55
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/public/index.php on line 55" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:51:28 [error] 29#29: *61 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function menstrual-calender.get() in /var/www/html/public/index.php:55
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/public/index.php on line 55" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:53:49 [error] 29#29: *69 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function {closure}(), 1 passed in /var/www/html/public/index.php on line 57 and exactly 2 expected in /var/www/html/public/index.php:34
+Stack trace:
+#0 /var/www/html/public/index.php(57): {closure}()
+#1 {main}
+  thrown in /var/www/html/public/index.php on line 34" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:55:50 [error] 30#30: *75 FastCGI sent in stderr: "PHP message: PHP Warning:  Undefined variable $responseRoute in /var/www/html/public/index.php on line 58" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2023/10/05 02:57:47 [error] 30#30: *79 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to a member function getHeaders() on int in /var/www/html/public/index.php:62
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/public/index.php on line 62" while reading response header from upstream, client: 172.18.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
