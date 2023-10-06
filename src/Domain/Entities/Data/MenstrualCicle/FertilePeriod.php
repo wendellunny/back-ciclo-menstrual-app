@@ -3,8 +3,9 @@ namespace CicloMenstrual\Domain\Entities\Data\MenstrualCicle;
 
 use CicloMenstrual\Domain\Api\Entities\Data\MenstrualCicle\FertilePeriodInterface;
 use DateTimeImmutable;
+use JsonSerializable;
 
-class FertilePeriod implements FertilePeriodInterface
+class FertilePeriod implements FertilePeriodInterface, JsonSerializable
 {
     public function __construct(
         private ?DateTimeImmutable $initialDate = null,
@@ -54,5 +55,13 @@ class FertilePeriod implements FertilePeriodInterface
     public function getEndDate(): DateTimeImmutable
     {
         return $this->endDate;
+    }
+
+    public function jsonSerialize(): mixed
+    {
+        return [
+            'initial_date' => date_format($this->initialDate, 'Y-m-d'),
+            'end_date' => date_format($this->endDate, 'Y-m-d')
+        ];
     }
 }

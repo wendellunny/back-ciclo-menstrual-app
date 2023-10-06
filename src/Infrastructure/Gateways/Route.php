@@ -30,6 +30,7 @@ class Route extends Singleton
             $_COOKIE,
             $_FILES
         );
+        
         $this->routerContainer = $routerContainer;
         $this->map = $routerContainer->getMap();
         $this->container = $container;
@@ -40,7 +41,7 @@ class Route extends Singleton
         $controller = $this->container->get($contrellerClass);
 
         $this->map->get($route_name, $uri, function(
-            RequestInterface $request, 
+            RequestInterface $request,
             ResponseInterface $response) use($controller)
         {
             return $controller->execute($request, $response);

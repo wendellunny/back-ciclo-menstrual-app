@@ -11,17 +11,30 @@ use DateInterval;
 use DateTimeImmutable;
 use DI\Container;
 use DI\ContainerBuilder;
+use Throwable;
 
 class App
 {
-    public function __construct(private Container $container)
-    {
-    }
+    public const DI_DEFINITIONS = __DIR__ .  DIRECTORY_SEPARATOR
+        . '..' . DIRECTORY_SEPARATOR
+        . '..' . DIRECTORY_SEPARATOR
+        . '..' . DIRECTORY_SEPARATOR
+        .'config' . DIRECTORY_SEPARATOR
+        . 'di.php';
 
     public function start(): void
     {
-        $router = new Router($this->container);
+        try{
+            $containerBuilder = (new ContainerBuilder())->addDefinitions(static::DI_DEFINITIONS);
+            $diContainer = $containerBuilder->build();
+            $routerContainer = new RouterContainer();
 
-        $router->handle();
+            $router = new Router($diContainer, $routerContainer);
+
+            $router->handle();
+        }catch(Throwable $e){
+            dd($e->getMessage(), $e->getTrace());
+        }
+        
     }
 }

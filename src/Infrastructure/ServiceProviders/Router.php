@@ -13,12 +13,11 @@ class Router
 {
     private Route $route;
 
-    public function __construct(private Container $container)
+    public function __construct(private Container $container, private RouterContainer $routerContainer)
     {
         $this->route = Route::getInstance();
-        $routerContainer = $this->container->get(RouterContainer::class);
         
-        $this->route->init($routerContainer, $this->container);
+        $this->route->init($this->routerContainer, $this->container);
     }
 
     public function handle(): void

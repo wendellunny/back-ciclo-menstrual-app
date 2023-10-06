@@ -6,8 +6,9 @@ use CicloMenstrual\Domain\Api\Entities\Data\MenstrualCicle\FertilePeriodInterfac
 use CicloMenstrual\Domain\Api\Entities\Data\MenstrualCicle\LutealPhaseInterface;
 use CicloMenstrual\Domain\Api\Entities\Data\MenstrualCicle\MenstruationInterface;
 use CicloMenstrual\Domain\Api\Entities\Data\MenstrualCicleInterface;
+use JsonSerializable;
 
-class MenstrualCicle implements MenstrualCicleInterface
+class MenstrualCicle implements MenstrualCicleInterface, JsonSerializable
 {
     
     public function __construct(
@@ -80,5 +81,16 @@ class MenstrualCicle implements MenstrualCicleInterface
     public function getLutealPhase(): LutealPhaseInterface
     {
         return $this->lutealPhase;
+    }
+
+    public function jsonSerialize(): mixed
+    {
+        return [
+            'menstrual_cicle' => [
+                'menstruation' => $this->menstruation,
+                'fertile_period' => $this->fertilePeriod,
+                'luteal_phase' => $this->lutealPhase
+            ]
+        ];
     }
 }

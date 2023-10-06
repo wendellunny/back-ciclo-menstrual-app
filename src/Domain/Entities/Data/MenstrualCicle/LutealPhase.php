@@ -4,8 +4,9 @@ namespace CicloMenstrual\Domain\Entities\Data\MenstrualCicle;
 
 use CicloMenstrual\Domain\Api\Entities\Data\MenstrualCicle\LutealPhaseInterface;
 use DateTimeImmutable;
+use JsonSerializable;
 
-class LutealPhase implements LutealPhaseInterface
+class LutealPhase implements LutealPhaseInterface, JsonSerializable
 {
     public function __construct(
         private ?DateTimeImmutable $initialDate = null,
@@ -55,5 +56,13 @@ class LutealPhase implements LutealPhaseInterface
     public function getEndDate(): DateTimeImmutable
     {
         return $this->endDate;
+    }
+
+    public function jsonSerialize(): mixed
+    {
+        return [
+            'initial_date' => date_format($this->initialDate, 'Y-m-d'),
+            'end_date' => date_format($this->endDate, 'Y-m-d')
+        ];
     }
 }
