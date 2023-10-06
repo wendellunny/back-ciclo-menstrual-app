@@ -9,4 +9,4 @@ $route = Route::getInstance();
  * Api Routes
  */
 
-$route->get('/home', MenstrualPeriodController::class, 'home');
+$route->get('/menstrual-calendar', MenstrualPeriodController::class, 'home');
