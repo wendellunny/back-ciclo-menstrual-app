@@ -15,7 +15,7 @@ class MenstrualDateRepositoryMock implements MenstrualDateRepositoryInterface
     }
 
     /**
-     * Undocumented function
+     * save
      *
      * @param UserMenstrualDateInterface $userMenstrualDate
      * @return boolean
@@ -26,7 +26,7 @@ class MenstrualDateRepositoryMock implements MenstrualDateRepositoryInterface
     }
 
     /**
-     * Undocumented function
+     * Load last menstrual date by user
      *
      * @param UserInterface $user
      * @return UserMenstrualDateInterface

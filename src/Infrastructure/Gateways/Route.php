@@ -40,11 +40,9 @@ class Route extends Singleton
     {
         $controller = $this->container->get($contrellerClass);
 
-        $this->map->get($route_name, $uri, function(
-            RequestInterface $request,
-            ResponseInterface $response) use($controller)
+        $this->map->get($route_name, $uri, function(RequestInterface $request) use($controller)
         {
-            return $controller->execute($request, $response);
+            return $controller->execute($request);
         });
     }
 
@@ -52,8 +50,8 @@ class Route extends Singleton
     {
         $controller = $this->container->get($contrellerClass);
         
-        $this->map->post($route_name, $uri, function($request, $response) use($controller){
-            $controller->execute($request, $response);
+        $this->map->post($route_name, $uri, function(RequestInterface $request) use($controller){
+            return $controller->execute($request);
         });
     }
 

@@ -14,7 +14,7 @@ use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response;
 
 
-class MenstrualPeriodController implements ControllerInterface
+class MenstrualCalendarController implements ControllerInterface
 {
     public function __construct(private Response $response, private MenstrualCalendarInterface $menstrualcalendar)
     {

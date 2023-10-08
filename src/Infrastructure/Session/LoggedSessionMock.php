@@ -18,6 +18,8 @@ class LoggedSessionMock implements LoggedSessionInterface
      */
     public function getUser(): UserInterface
     {
-        return $this->user;
+        return $this->user
+            ->setUuid('uuid-mockado')
+            ->setName('wendel');   
     }
 }

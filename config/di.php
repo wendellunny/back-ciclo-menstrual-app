@@ -14,6 +14,7 @@ use CicloMenstrual\UseCases\Api\Authentication\Data\UserInterface;
 use CicloMenstrual\UseCases\Api\Authentication\Session\LoggedSessionInterface;
 use CicloMenstrual\UseCases\Api\MenstrualCalendar\Data\UserMenstrualDateInterface;
 use CicloMenstrual\UseCases\Api\MenstrualCalendar\MenstrualCalendarInterface;
+use CicloMenstrual\UseCases\Api\MenstrualCalendar\MenstrualDateRegisterInterface;
 use CicloMenstrual\UseCases\Api\MenstrualCalendar\MenstrualDateRepositoryInterface;
 use CicloMenstrual\UseCases\Api\MenstrualCicle\Data\PeriodInterface;
 use CicloMenstrual\UseCases\Api\MenstrualCicle\PeriodProcessorInterface;
@@ -39,7 +40,7 @@ return [
      * Use Cases
      */
     MenstrualCalendarInterface::class => autowire(MenstrualCalendar::class),
-    MenstrualDateRegister::class => autowire(MenstrualDateRegister::class),
+    MenstrualDateRegisterInterface::class => autowire(MenstrualDateRegister::class),
     UserMenstrualDateInterface::class => autowire(UserMenstrualDate::class),
     PeriodProcessorInterface::class => autowire(PeriodProcessor::class),
     PeriodInterface::class => autowire(Period::class),
