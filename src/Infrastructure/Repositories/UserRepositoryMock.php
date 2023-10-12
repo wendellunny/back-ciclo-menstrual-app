@@ -36,6 +36,11 @@ class UserRepositoryMock implements UserRepositoryInterface
      */
     public function loadByEmail(string $email): UserInterface|false
     {
+    
+        if ($email != 'wendel@teste.com') {
+            return false;
+        }
+
         $uuid = 'uuid';
         $password =  "{$uuid}_minhasenha";
         $hash = password_hash($password, PASSWORD_BCRYPT);

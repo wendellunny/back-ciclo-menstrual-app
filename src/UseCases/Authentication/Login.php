@@ -27,10 +27,11 @@ class Login implements LoginInterface
     public function authenticate(UserInterface $user): string|false
     {
         $userSaved = $this->userRepository->loadByEmail($user->getEmail());
-        // dd($userSaved);
-
-        $decrypt = openssl_decrypt($userSaved->getPassword(), 'AES-256-CBC', 'minha chave');
-        $passwordVerification = password_verify("{$userSaved->getUuid()}_{$user->getPassword()}", $decrypt);
+        $password = $userSaved ? $userSaved->getPassword() : '';
+        $uuid = $userSaved ? $userSaved->getUuid() : '';
+        
+        $decrypt = openssl_decrypt($password, 'AES-256-CBC', 'minha chave');
+        $passwordVerification = password_verify("{$uuid}_{$user->getPassword()}", $decrypt);
         
 
         if(!$userSaved || !$passwordVerification)
