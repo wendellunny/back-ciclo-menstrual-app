@@ -19,7 +19,7 @@
         "symfony/var-dumper": "^6.3"
     },
     "require": {
-        "firebase/php-jwt": "^6.8",
+        "firebase/php-jwt": "^6.9",
         "php-di/php-di": "^7.0",
         "aura/router": "^3.3",
         "zendframework/zend-diactoros": "^1.3"

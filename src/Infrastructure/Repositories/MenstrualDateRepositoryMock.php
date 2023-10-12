@@ -22,7 +22,8 @@ class MenstrualDateRepositoryMock implements MenstrualDateRepositoryInterface
      */
     public function save(UserMenstrualDateInterface $userMenstrualDate): bool
     {
-        return true;
+        $date = $userMenstrualDate->getDate();
+        return $date != '2023-10-08';
     }
 
     /**

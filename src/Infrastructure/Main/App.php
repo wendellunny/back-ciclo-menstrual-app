@@ -5,6 +5,7 @@ namespace CicloMenstrual\Infrastructure\Main;
 use Aura\Router\RouterContainer;
 use CicloMenstrual\Infrastructure\ServiceProviders\Router;
 use CicloMenstrual\Infrastructure\Singleton;
+use CicloMenstrual\UseCases\Authentication\Exception\LoginException;
 use CicloMenstrual\UseCases\MenstrualCicle\Data\Period;
 use CicloMenstrual\UseCases\MenstrualCicle\PeriodProcessor;
 use DateInterval;
@@ -28,12 +29,20 @@ class App
             $containerBuilder = (new ContainerBuilder())->addDefinitions(static::DI_DEFINITIONS);
             $diContainer = $containerBuilder->build();
             $routerContainer = new RouterContainer();
-
+            
             $router = new Router($diContainer, $routerContainer);
 
             $router->handle();
         }catch(Throwable $e){
-            dd($e->getMessage(), $e->getTrace());
+            http_response_code($e->getCode());
+            $error = [
+                'message' => $e->getMessage(),
+            ];
+
+            if(!$e instanceof LoginException) {
+                $error['trace'] = $e->getTrace();
+            }
+            echo json_encode($error);
         }
         
     }

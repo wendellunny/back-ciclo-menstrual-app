@@ -25,6 +25,7 @@ class MenstrualDateRegisterController implements ControllerInterface
             $requestData->last_menstrual_date
         );
         $isSaved = $this->menstrualDateRegister->execute($lastMenstrualDate);
+        
         $message = $isSaved
             ? [
                 'message' => 'Data registrada com sucesso'
@@ -36,7 +37,7 @@ class MenstrualDateRegisterController implements ControllerInterface
         $this->response
             ->getBody()
             ->write(json_encode($message));
-            
+
         return $this->response;
     }
 }

@@ -5,9 +5,9 @@ namespace CicloMenstrual\Infrastructure\Session;
 use CicloMenstrual\UseCases\Api\Authentication\Data\UserInterface;
 use CicloMenstrual\UseCases\Api\Authentication\Session\LoggedSessionInterface;
 
-class LoggedSessionMock implements LoggedSessionInterface
+class LoggedSession implements LoggedSessionInterface
 {
-    public function __construct(private UserInterface $user)
+    public function __construct(private UserInterface $user, private string $token)
     {
         
     }
@@ -18,9 +18,7 @@ class LoggedSessionMock implements LoggedSessionInterface
      */
     public function getUser(): UserInterface
     {
-        return $this->user
-            ->setUuid('uuid-mockado')
-            ->setName('wendel');   
+        return $this->user;
     }
 
     /**
@@ -30,6 +28,6 @@ class LoggedSessionMock implements LoggedSessionInterface
      */
     public function getToken(): string
     {
-        return 'token';
+        return $this->token;
     }
 }

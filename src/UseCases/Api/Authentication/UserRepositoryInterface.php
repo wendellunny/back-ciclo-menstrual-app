@@ -1,6 +1,6 @@
 <?php
 
-namespace CicloMenstrual\Usecases\Api\Authentication;
+namespace CicloMenstrual\UseCases\Api\Authentication;
 
 use CicloMenstrual\UseCases\Api\Authentication\Data\UserInterface;
 

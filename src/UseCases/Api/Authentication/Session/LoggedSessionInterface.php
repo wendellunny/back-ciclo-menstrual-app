@@ -12,4 +12,11 @@ interface LoggedSessionInterface
      * @return UserInterface
      */
     public function getUser(): UserInterface;
+
+    /**
+     * Authorization token
+     *
+     * @return string
+     */
+    public function getToken(): string;
 }

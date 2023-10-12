@@ -1,6 +1,6 @@
 <?php
 
-namespace CicloMenstrual\Usecases\Api\Authentication;
+namespace CicloMenstrual\UseCases\Api\Authentication;
 
 use CicloMenstrual\UseCases\Api\Authentication\Data\UserInterface;
 
@@ -12,5 +12,5 @@ interface LoginInterface
      * @param UserInterface $user
      * @return void
      */
-    public function authenticate(UserInterface $user): void;
+    public function authenticate(UserInterface $user): string|false;
 }

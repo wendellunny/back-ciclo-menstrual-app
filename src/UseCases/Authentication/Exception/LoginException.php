@@ -1,6 +1,6 @@
 <?php
 
-namespace CicloMenstrual\UseCases\Authetication\Exception;
+namespace CicloMenstrual\UseCases\Authentication\Exception;
 
 class LoginException extends \Exception
 {
