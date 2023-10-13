@@ -13,6 +13,10 @@ use Zend\Diactoros\Response;
 use Zend\Diactoros\ServerRequest;
 use Zend\Diactoros\ServerRequestFactory;
 
+use function DI\autowire;
+use function DI\create;
+use function DI\get;
+
 class Route extends Singleton
 {
     private Map $map;
@@ -36,12 +40,17 @@ class Route extends Singleton
         $this->container = $container;
     }
 
-    public function get(string $uri, string $contrellerClass, string $route_name)
+    public function get(string $uri, string $contrellerClass, string $route_name, $middlewares = [])
     {
         $controller = $this->container->get($contrellerClass);
 
-        $this->map->get($route_name, $uri, function(RequestInterface $request) use($controller)
+        $this->map->get($route_name, $uri, function(RequestInterface $request) use($controller, $middlewares)
         {
+            array_walk($middlewares, function($middleware) use($request){
+                $object = $this->container->get($middleware);
+                $object->handle($request);
+            });
+            
             return $controller->execute($request);
         });
     }
@@ -83,4 +92,11 @@ class Route extends Singleton
         http_response_code($response->getStatusCode());
         echo $response->getBody();
     }
+
+    // public function group(array $middlewares, callable $routes)
+    // {
+    //     $routes($this);
+    // }
+
+
 }

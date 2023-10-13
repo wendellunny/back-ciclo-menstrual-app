@@ -41,7 +41,7 @@ class Login implements LoginInterface
 
         $iss = $this->request->getHeader('host')[0];
         $iat  = time();
-        $exp = $iat + 1;
+        $exp = $iat + 3600;
         $nbf = time();
         $sub = [
             'id' => $userSaved->getUuid(),
