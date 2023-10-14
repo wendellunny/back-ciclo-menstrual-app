@@ -12,12 +12,20 @@ use Psr\Http\Message\RequestInterface;
 
 class Login implements LoginInterface
 {
+    /**
+     * Constructor method
+     *
+     * @param UserRepositoryInterface $userRepository
+     * @param Jwt $jwt
+     * @param RequestInterface $request
+     */
     public function __construct(
         private UserRepositoryInterface $userRepository,
         private Jwt $jwt,
         private RequestInterface $request
     ) {
     }
+
     /**
      * Authenticate
      *
@@ -39,6 +47,18 @@ class Login implements LoginInterface
             throw new LoginException();
         }
 
+        return $this->generateJwtKey($userSaved);
+
+    }
+
+    /**
+     * Generate jwt key
+     *
+     * @param UserInterface $userSaved
+     * @return string
+     */
+    private function generateJwtKey (UserInterface $userSaved): string
+    {
         $iss = $this->request->getHeader('host')[0];
         $iat  = time();
         $exp = $iat + 3600;
@@ -47,6 +67,7 @@ class Login implements LoginInterface
             'id' => $userSaved->getUuid(),
             'name' => $userSaved->getName()
         ];
+
         $jti = uniqid();
         
         $jwtData = compact('iss', 'sub' ,'iat', 'exp', 'nbf', 'jti');
