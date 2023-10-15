@@ -10,7 +10,7 @@ interface LoginInterface
      * Authenticate
      *
      * @param UserInterface $user
-     * @return void
+     * @return string|false
      */
     public function authenticate(UserInterface $user): string|false;
 }

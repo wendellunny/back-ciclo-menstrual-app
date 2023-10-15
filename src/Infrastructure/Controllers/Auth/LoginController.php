@@ -3,6 +3,7 @@
 namespace CicloMenstrual\Infrastructure\Controllers\Auth;
 
 use CicloMenstrual\Infrastructure\Api\Controllers\ControllerInterface;
+use CicloMenstrual\UseCases\Api\Authentication\Data\UserInterface;
 use CicloMenstrual\UseCases\Api\Authentication\LoginInterface;
 use CicloMenstrual\UseCases\Authentication\Data\User;
 use Psr\Http\Message\RequestInterface;
@@ -17,17 +18,24 @@ class LoginController implements ControllerInterface
     }
     public function execute(RequestInterface $request): ResponseInterface
     {
+        $user = $this->buildUserData($request);
+        $jwtToken = $this->login->authenticate($user);
+        $this->buildResponseData($jwtToken);
+
+        return $this->response;
+    }
+
+    private function buildUserData($request): UserInterface
+    {
         $body = json_decode($request->getBody()->getContents(), true);
         $user = new User();
-        $user->setEmail($body['email']);
-        $user->setPassword($body['password']);
+        return $user->setEmail($body['email'])->setPassword($body['password']);
+    }
 
-        $jwtToken = $this->login->authenticate($user);
-
+    private function buildResponseData(string $jwtToken): void
+    {
         $this->response
             ->getBody()
             ->write(json_encode(['token' => $jwtToken]));
-
-        return $this->response;
     }
 }

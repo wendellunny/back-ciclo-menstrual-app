@@ -2,16 +2,18 @@
 
 namespace CicloMenstrual\Infrastructure\Middlewares;
 
+use CicloMenstrual\Infrastructure\Api\Middlewares\MiddlewareInterface;
 use CicloMenstrual\Infrastructure\Gateways\Jwt;
 use DateTimeImmutable;
 use Psr\Http\Message\RequestInterface;
 
-class JwtMiddleware
+class JwtMiddleware implements MiddlewareInterface
 {
     public function __construct(private Jwt $jwt)
     {
         
     }
+
     public function handle(RequestInterface $request): void
     {
         if (! preg_match('/Bearer\s(\S+)/', $_SERVER['HTTP_AUTHORIZATION'], $matches)) {
