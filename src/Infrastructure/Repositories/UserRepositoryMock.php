@@ -44,7 +44,7 @@ class UserRepositoryMock implements UserRepositoryInterface
         $uuid = 'uuid';
         $password =  "{$uuid}_minhasenha";
         $hash = password_hash($password, PASSWORD_BCRYPT);
-        $crypt = openssl_encrypt($hash, 'AES-256-CBC', 'minha chave');
+        $crypt = openssl_encrypt($hash, 'AES-256-CBC', $_ENV['APP_ENCRYPT_KEY']);
         
         $user = new User();
         return $user->setUuid($uuid)

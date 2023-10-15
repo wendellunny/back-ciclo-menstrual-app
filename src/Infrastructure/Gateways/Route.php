@@ -55,11 +55,17 @@ class Route extends Singleton
         });
     }
 
-    public function post(string $uri, string $contrellerClass, string $route_name)
+    public function post(string $uri, string $contrellerClass, string $route_name, $middlewares = [])
     {
         $controller = $this->container->get($contrellerClass);
         
-        $this->map->post($route_name, $uri, function(RequestInterface $request) use($controller){
+        $this->map->post($route_name, $uri, function(RequestInterface $request) use($controller, $middlewares)
+        {
+            array_walk($middlewares, function($middleware) use($request){
+                $object = $this->container->get($middleware);
+                $object->handle($request);
+            });
+            
             return $controller->execute($request);
         });
     }

@@ -5,15 +5,18 @@ namespace CicloMenstrual\Infrastructure\Controllers\Auth;
 use CicloMenstrual\Infrastructure\Api\Controllers\ControllerInterface;
 use CicloMenstrual\UseCases\Api\Authentication\Data\UserInterface;
 use CicloMenstrual\UseCases\Api\Authentication\LoginInterface;
-use CicloMenstrual\UseCases\Authentication\Data\User;
+use CicloMenstrual\UseCases\Authentication\Data\UserFactory;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response;
 
 class LoginController implements ControllerInterface
 {
-    public function __construct(private LoginInterface $login, private Response $response)
-    {
+    public function __construct(
+        private LoginInterface $login,
+        private Response $response,
+        private UserFactory $userFactory
+    ) {
         
     }
     public function execute(RequestInterface $request): ResponseInterface
@@ -28,7 +31,7 @@ class LoginController implements ControllerInterface
     private function buildUserData($request): UserInterface
     {
         $body = json_decode($request->getBody()->getContents(), true);
-        $user = new User();
+        $user = $this->userFactory->create();
         return $user->setEmail($body['email'])->setPassword($body['password']);
     }
 

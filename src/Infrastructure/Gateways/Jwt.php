@@ -8,19 +8,16 @@ use stdClass;
 
 class Jwt
 {
-    public const KEY = 'minha-chave';
-
-
     public function encode(array $payload): string
     {
         $payload = array_merge(
             $payload
         );
-        return JWTJWT::encode($payload, static::KEY, 'HS256');
+        return JWTJWT::encode($payload, $_ENV['JWT_KEY'], 'HS256');
     }
 
     public function decode(string $jwtKey): stdClass
     {
-        return JWTJWT::decode($jwtKey, new Key(static::KEY, 'HS256'));
+        return JWTJWT::decode($jwtKey, new Key($_ENV['JWT_KEY'], 'HS256'));
     }
 }
