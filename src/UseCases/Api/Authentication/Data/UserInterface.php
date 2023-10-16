@@ -2,7 +2,7 @@
 
 namespace CicloMenstrual\UseCases\Api\Authentication\Data;
 
-interface   UserInterface
+interface UserInterface
 {
     /**
      * Undocumented function

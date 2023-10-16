@@ -21,4 +21,11 @@ interface UserRepositoryInterface
      * @return UserInterface|false
      */
     public function loadByEmail(string $email): UserInterface|false;
+
+    /**
+     * Insert user in database
+     *
+     * @return boolean
+     */
+    public function insert(UserInterface $user): bool;
 }
