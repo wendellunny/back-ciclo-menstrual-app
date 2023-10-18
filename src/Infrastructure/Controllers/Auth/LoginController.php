@@ -39,6 +39,6 @@ class LoginController implements ControllerInterface
     {
         $this->response
             ->getBody()
-            ->write(json_encode(['token' => $$jwtToken]));
+            ->write(json_encode(['token' => $jwtToken]));
     }
 }

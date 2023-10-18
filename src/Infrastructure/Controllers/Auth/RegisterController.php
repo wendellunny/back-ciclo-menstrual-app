@@ -11,7 +11,7 @@ use Zend\Diactoros\Response;
 
 class RegisterController implements ControllerInterface
 {
-    private function __construct(
+    public function __construct(
         private UserFactory $userFactory,
         private Registration $registration,
         private Response $response
@@ -29,10 +29,11 @@ class RegisterController implements ControllerInterface
             'password' => $bodyData['password']
         ]);
 
-        $this->registration->register($user);
-        $this->response->getBody()->write(json_encode([
-            'message' => 'Usuário registrado com sucesso'
-        ]));
+        $message  = $this->registration->register($user)
+            ? 'Usuário registrado com sucesso'
+            : 'Falha ao registar usuário';
+            
+        $this->response->getBody()->write(json_encode(compact('message')));
 
         return $this->response;
     }

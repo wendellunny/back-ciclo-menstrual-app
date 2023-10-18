@@ -1,6 +1,7 @@
 <?php
 
 use CicloMenstrual\Infrastructure\Controllers\Auth\LoginController;
+use CicloMenstrual\Infrastructure\Controllers\Auth\RegisterController;
 use CicloMenstrual\Infrastructure\Controllers\MenstrualCalendarController;
 use CicloMenstrual\Infrastructure\Controllers\MenstrualDateRegisterController;
 use CicloMenstrual\Infrastructure\Gateways\Route;
@@ -30,3 +31,4 @@ $route->post(
 );
 
 $route->post('/login', LoginController::class, 'login');
+$route->post('/register', RegisterController::class, 'register');

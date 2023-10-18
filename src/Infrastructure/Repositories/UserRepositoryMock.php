@@ -52,4 +52,14 @@ class UserRepositoryMock implements UserRepositoryInterface
             ->setPassword($crypt)
             ->setEmail($email);
     }
+
+     /**
+     * Insert user in database
+     *
+     * @return boolean
+     */
+    public function insert(UserInterface $user): bool
+    {
+        return true;
+    }
 }
