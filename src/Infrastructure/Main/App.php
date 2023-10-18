@@ -21,12 +21,13 @@ class App
         . '..' . DIRECTORY_SEPARATOR
         . '..' . DIRECTORY_SEPARATOR
         .'config' . DIRECTORY_SEPARATOR
-        . 'di.php';
+        . '*.php';
 
     public function start(): void
     {
         try{
-            $containerBuilder = (new ContainerBuilder())->addDefinitions(static::DI_DEFINITIONS);
+            $files = glob(static::DI_DEFINITIONS);
+            $containerBuilder = (new ContainerBuilder())->addDefinitions(...$files);
             $diContainer = $containerBuilder->build();
             $routerContainer = new RouterContainer();
             
