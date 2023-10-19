@@ -2,50 +2,19 @@
 
 namespace CicloMenstrual\Infrastructure\Main;
 
-use Aura\Router\RouterContainer;
-use CicloMenstrual\Infrastructure\ServiceProviders\Router;
-use CicloMenstrual\Infrastructure\Singleton;
-use CicloMenstrual\UseCases\Authentication\Exception\LoginException;
-use CicloMenstrual\UseCases\MenstrualCicle\Data\Period;
-use CicloMenstrual\UseCases\MenstrualCicle\PeriodProcessor;
-use DateInterval;
-use DateTimeImmutable;
-use DI\Container;
-use DI\ContainerBuilder;
+use CicloMenstrual\Infrastructure\Api\Main\AppInterface;
 use Throwable;
 
-class App
+class App implements AppInterface
 {
-    public const DI_DEFINITIONS =
-        __DIR__     . DIRECTORY_SEPARATOR
-        . '..'      . DIRECTORY_SEPARATOR
-        . '..'      . DIRECTORY_SEPARATOR
-        . '..'      . DIRECTORY_SEPARATOR
-        . 'config'  . DIRECTORY_SEPARATOR
-        . 'di'      . DIRECTORY_SEPARATOR
-        . '*.php';
+    use AppTrait;
 
     public function start(): void
     {
         try{
-            $diConfigFiles = glob(static::DI_DEFINITIONS);
-            $containerBuilder = (new ContainerBuilder())->addDefinitions(...$diConfigFiles);
-            $diContainer = $containerBuilder->build();
-            $routerContainer = new RouterContainer();
-            
-            $router = new Router($diContainer, $routerContainer);
-
-            $router->handle();
+            $this->configure(static::DI_DEFINITIONS);
         }catch(Throwable $e){
-            http_response_code($e->getCode());
-            $error = [
-                'message' => $e->getMessage(),
-            ];
-
-            if(!$e instanceof LoginException) {
-                $error['trace'] = $e->getTrace();
-            }
-            echo json_encode($error);
+            $this->formatErrors($e);
         }
         
     }

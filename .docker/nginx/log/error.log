@@ -436,3 +436,76 @@
 2023/10/18 22:46:22 [error] 33#33: *145 FastCGI sent in stderr: "PHP message: PHP Warning:  Trying to access array offset on value of type null in /var/www/html/src/Infrastructure/Controllers/Auth/RegisterController.php on line 26; PHP message: PHP Warning:  Trying to access array offset on value of type null in /var/www/html/src/Infrastructure/Controllers/Auth/RegisterController.php on line 27; PHP message: PHP Warning:  Trying to access array offset on value of type null in /var/www/html/src/Infrastructure/Controllers/Auth/RegisterController.php on line 28; PHP message: PHP Warning:  Trying to access array offset on value of type null in /var/www/html/src/Infrastructure/Controllers/Auth/RegisterController.php on line 29" while reading response header from upstream, client: 192.168.16.1, server: api.ciclomenstrual.test, request: "POST /register HTTP/1.1", upstream: "fastcgi://192.168.16.2:9000", host: "127.0.0.1"
 2023/10/18 22:46:24 [error] 33#33: *147 FastCGI sent in stderr: "PHP message: PHP Warning:  Trying to access array offset on value of type null in /var/www/html/src/Infrastructure/Controllers/Auth/RegisterController.php on line 26; PHP message: PHP Warning:  Trying to access array offset on value of type null in /var/www/html/src/Infrastructure/Controllers/Auth/RegisterController.php on line 27; PHP message: PHP Warning:  Trying to access array offset on value of type null in /var/www/html/src/Infrastructure/Controllers/Auth/RegisterController.php on line 28; PHP message: PHP Warning:  Trying to access array offset on value of type null in /var/www/html/src/Infrastructure/Controllers/Auth/RegisterController.php on line 29" while reading response header from upstream, client: 192.168.16.1, server: api.ciclomenstrual.test, request: "POST /register HTTP/1.1", upstream: "fastcgi://192.168.16.2:9000", host: "127.0.0.1"
 2023/10/19 22:24:55 [error] 33#33: *151 FastCGI sent in stderr: "PHP message: PHP Warning:  openssl_encrypt(): Using an empty Initialization Vector (iv) is potentially insecure and not recommended in /var/www/html/src/Infrastructure/Repositories/UserRepositoryMock.php on line 47" while reading response header from upstream, client: 192.168.16.1, server: api.ciclomenstrual.test, request: "POST /login HTTP/1.1", upstream: "fastcgi://192.168.16.2:9000", host: "127.0.0.1"
+2023/10/19 22:42:09 [error] 33#33: *155 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Interface "CicloMenstrual\Infrastructure\Api\Main\AppInterface" not found in /var/www/html/src/Infrastructure/Main/App.php:8
+Stack trace:
+#0 /var/www/html/vendor/composer/ClassLoader.php(576): include()
+#1 /var/www/html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 /var/www/html/public/index.php(16): Composer\Autoload\ClassLoader->loadClass()
+#3 {main}
+  thrown in /var/www/html/src/Infrastructure/Main/App.php on line 8" while reading response header from upstream, client: 192.168.16.1, server: api.ciclomenstrual.test, request: "POST /login HTTP/1.1", upstream: "fastcgi://192.168.16.2:9000", host: "127.0.0.1"
+2023/10/19 22:42:10 [error] 33#33: *157 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Interface "CicloMenstrual\Infrastructure\Api\Main\AppInterface" not found in /var/www/html/src/Infrastructure/Main/App.php:8
+Stack trace:
+#0 /var/www/html/vendor/composer/ClassLoader.php(576): include()
+#1 /var/www/html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 /var/www/html/public/index.php(16): Composer\Autoload\ClassLoader->loadClass()
+#3 {main}
+  thrown in /var/www/html/src/Infrastructure/Main/App.php on line 8" while reading response header from upstream, client: 192.168.16.1, server: api.ciclomenstrual.test, request: "POST /login HTTP/1.1", upstream: "fastcgi://192.168.16.2:9000", host: "127.0.0.1"
+2023/10/19 22:42:10 [error] 33#33: *159 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Interface "CicloMenstrual\Infrastructure\Api\Main\AppInterface" not found in /var/www/html/src/Infrastructure/Main/App.php:8
+Stack trace:
+#0 /var/www/html/vendor/composer/ClassLoader.php(576): include()
+#1 /var/www/html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 /var/www/html/public/index.php(16): Composer\Autoload\ClassLoader->loadClass()
+#3 {main}
+  thrown in /var/www/html/src/Infrastructure/Main/App.php on line 8" while reading response header from upstream, client: 192.168.16.1, server: api.ciclomenstrual.test, request: "POST /login HTTP/1.1", upstream: "fastcgi://192.168.16.2:9000", host: "127.0.0.1"
+2023/10/19 22:42:10 [error] 33#33: *161 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Interface "CicloMenstrual\Infrastructure\Api\Main\AppInterface" not found in /var/www/html/src/Infrastructure/Main/App.php:8
+Stack trace:
+#0 /var/www/html/vendor/composer/ClassLoader.php(576): include()
+#1 /var/www/html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 /var/www/html/public/index.php(16): Composer\Autoload\ClassLoader->loadClass()
+#3 {main}
+  thrown in /var/www/html/src/Infrastructure/Main/App.php on line 8" while reading response header from upstream, client: 192.168.16.1, server: api.ciclomenstrual.test, request: "POST /login HTTP/1.1", upstream: "fastcgi://192.168.16.2:9000", host: "127.0.0.1"
+2023/10/19 22:42:11 [error] 33#33: *163 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Interface "CicloMenstrual\Infrastructure\Api\Main\AppInterface" not found in /var/www/html/src/Infrastructure/Main/App.php:8
+Stack trace:
+#0 /var/www/html/vendor/composer/ClassLoader.php(576): include()
+#1 /var/www/html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 /var/www/html/public/index.php(16): Composer\Autoload\ClassLoader->loadClass()
+#3 {main}
+  thrown in /var/www/html/src/Infrastructure/Main/App.php on line 8" while reading response header from upstream, client: 192.168.16.1, server: api.ciclomenstrual.test, request: "POST /login HTTP/1.1", upstream: "fastcgi://192.168.16.2:9000", host: "127.0.0.1"
+2023/10/19 22:42:11 [error] 33#33: *165 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Interface "CicloMenstrual\Infrastructure\Api\Main\AppInterface" not found in /var/www/html/src/Infrastructure/Main/App.php:8
+Stack trace:
+#0 /var/www/html/vendor/composer/ClassLoader.php(576): include()
+#1 /var/www/html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 /var/www/html/public/index.php(16): Composer\Autoload\ClassLoader->loadClass()
+#3 {main}
+  thrown in /var/www/html/src/Infrastructure/Main/App.php on line 8" while reading response header from upstream, client: 192.168.16.1, server: api.ciclomenstrual.test, request: "POST /login HTTP/1.1", upstream: "fastcgi://192.168.16.2:9000", host: "127.0.0.1"
+2023/10/19 22:42:11 [error] 33#33: *167 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Interface "CicloMenstrual\Infrastructure\Api\Main\AppInterface" not found in /var/www/html/src/Infrastructure/Main/App.php:8
+Stack trace:
+#0 /var/www/html/vendor/composer/ClassLoader.php(576): include()
+#1 /var/www/html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 /var/www/html/public/index.php(16): Composer\Autoload\ClassLoader->loadClass()
+#3 {main}
+  thrown in /var/www/html/src/Infrastructure/Main/App.php on line 8" while reading response header from upstream, client: 192.168.16.1, server: api.ciclomenstrual.test, request: "POST /login HTTP/1.1", upstream: "fastcgi://192.168.16.2:9000", host: "127.0.0.1"
+2023/10/19 22:42:12 [error] 33#33: *169 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Interface "CicloMenstrual\Infrastructure\Api\Main\AppInterface" not found in /var/www/html/src/Infrastructure/Main/App.php:8
+Stack trace:
+#0 /var/www/html/vendor/composer/ClassLoader.php(576): include()
+#1 /var/www/html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 /var/www/html/public/index.php(16): Composer\Autoload\ClassLoader->loadClass()
+#3 {main}
+  thrown in /var/www/html/src/Infrastructure/Main/App.php on line 8" while reading response header from upstream, client: 192.168.16.1, server: api.ciclomenstrual.test, request: "POST /login HTTP/1.1", upstream: "fastcgi://192.168.16.2:9000", host: "127.0.0.1"
+2023/10/19 22:42:12 [error] 33#33: *171 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Interface "CicloMenstrual\Infrastructure\Api\Main\AppInterface" not found in /var/www/html/src/Infrastructure/Main/App.php:8
+Stack trace:
+#0 /var/www/html/vendor/composer/ClassLoader.php(576): include()
+#1 /var/www/html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 /var/www/html/public/index.php(16): Composer\Autoload\ClassLoader->loadClass()
+#3 {main}
+  thrown in /var/www/html/src/Infrastructure/Main/App.php on line 8" while reading response header from upstream, client: 192.168.16.1, server: api.ciclomenstrual.test, request: "POST /login HTTP/1.1", upstream: "fastcgi://192.168.16.2:9000", host: "127.0.0.1"
+2023/10/19 22:42:12 [error] 33#33: *173 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Interface "CicloMenstrual\Infrastructure\Api\Main\AppInterface" not found in /var/www/html/src/Infrastructure/Main/App.php:8
+Stack trace:
+#0 /var/www/html/vendor/composer/ClassLoader.php(576): include()
+#1 /var/www/html/vendor/composer/ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 /var/www/html/public/index.php(16): Composer\Autoload\ClassLoader->loadClass()
+#3 {main}
+  thrown in /var/www/html/src/Infrastructure/Main/App.php on line 8" while reading response header from upstream, client: 192.168.16.1, server: api.ciclomenstrual.test, request: "POST /login HTTP/1.1", upstream: "fastcgi://192.168.16.2:9000", host: "127.0.0.1"
+2023/10/19 22:44:05 [error] 33#33: *175 FastCGI sent in stderr: "PHP message: PHP Warning:  Undefined variable $e in /var/www/html/src/Infrastructure/Main/AppTrait.php on line 43" while reading response header from upstream, client: 192.168.16.1, server: api.ciclomenstrual.test, request: "POST /login HTTP/1.1", upstream: "fastcgi://192.168.16.2:9000", host: "127.0.0.1"
+2023/10/19 22:44:08 [error] 34#34: *177 FastCGI sent in stderr: "PHP message: PHP Warning:  Undefined variable $e in /var/www/html/src/Infrastructure/Main/AppTrait.php on line 43" while reading response header from upstream, client: 192.168.16.1, server: api.ciclomenstrual.test, request: "POST /login HTTP/1.1", upstream: "fastcgi://192.168.16.2:9000", host: "127.0.0.1"
+2023/10/19 22:45:22 [error] 34#34: *179 FastCGI sent in stderr: "PHP message: PHP Warning:  openssl_encrypt(): Using an empty Initialization Vector (iv) is potentially insecure and not recommended in /var/www/html/src/Infrastructure/Repositories/UserRepositoryMock.php on line 47" while reading response header from upstream, client: 192.168.16.1, server: api.ciclomenstrual.test, request: "POST /login HTTP/1.1", upstream: "fastcgi://192.168.16.2:9000", host: "127.0.0.1"
