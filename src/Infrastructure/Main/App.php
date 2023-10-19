@@ -16,18 +16,20 @@ use Throwable;
 
 class App
 {
-    public const DI_DEFINITIONS = __DIR__ .  DIRECTORY_SEPARATOR
-        . '..' . DIRECTORY_SEPARATOR
-        . '..' . DIRECTORY_SEPARATOR
-        . '..' . DIRECTORY_SEPARATOR
-        .'config' . DIRECTORY_SEPARATOR
+    public const DI_DEFINITIONS =
+        __DIR__     . DIRECTORY_SEPARATOR
+        . '..'      . DIRECTORY_SEPARATOR
+        . '..'      . DIRECTORY_SEPARATOR
+        . '..'      . DIRECTORY_SEPARATOR
+        . 'config'  . DIRECTORY_SEPARATOR
+        . 'di'      . DIRECTORY_SEPARATOR
         . '*.php';
 
     public function start(): void
     {
         try{
-            $files = glob(static::DI_DEFINITIONS);
-            $containerBuilder = (new ContainerBuilder())->addDefinitions(...$files);
+            $diConfigFiles = glob(static::DI_DEFINITIONS);
+            $containerBuilder = (new ContainerBuilder())->addDefinitions(...$diConfigFiles);
             $diContainer = $containerBuilder->build();
             $routerContainer = new RouterContainer();
             
