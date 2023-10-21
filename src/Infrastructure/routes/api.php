@@ -6,10 +6,7 @@ use CicloMenstrual\Infrastructure\Controllers\MenstrualCalendarController;
 use CicloMenstrual\Infrastructure\Controllers\MenstrualDateRegisterController;
 use CicloMenstrual\Infrastructure\Gateways\Route;
 use CicloMenstrual\Infrastructure\Middlewares\JwtMiddleware;
-use CicloMenstrual\Infrastructure\ServiceProviders\RouteGroup;
 
-use function DI\autowire;
-use function DI\get;
 
 $route = Route::getInstance();
 

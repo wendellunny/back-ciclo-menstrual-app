@@ -13,4 +13,11 @@ interface AppInterface
         . 'config'  . DIRECTORY_SEPARATOR
         . 'di'      . DIRECTORY_SEPARATOR
         . '*.php';
+
+    /**
+     * Start
+     *
+     * @return void
+     */
+    public function start(): void;
 }

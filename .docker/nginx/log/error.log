@@ -509,3 +509,45 @@ Stack trace:
 2023/10/19 22:44:05 [error] 33#33: *175 FastCGI sent in stderr: "PHP message: PHP Warning:  Undefined variable $e in /var/www/html/src/Infrastructure/Main/AppTrait.php on line 43" while reading response header from upstream, client: 192.168.16.1, server: api.ciclomenstrual.test, request: "POST /login HTTP/1.1", upstream: "fastcgi://192.168.16.2:9000", host: "127.0.0.1"
 2023/10/19 22:44:08 [error] 34#34: *177 FastCGI sent in stderr: "PHP message: PHP Warning:  Undefined variable $e in /var/www/html/src/Infrastructure/Main/AppTrait.php on line 43" while reading response header from upstream, client: 192.168.16.1, server: api.ciclomenstrual.test, request: "POST /login HTTP/1.1", upstream: "fastcgi://192.168.16.2:9000", host: "127.0.0.1"
 2023/10/19 22:45:22 [error] 34#34: *179 FastCGI sent in stderr: "PHP message: PHP Warning:  openssl_encrypt(): Using an empty Initialization Vector (iv) is potentially insecure and not recommended in /var/www/html/src/Infrastructure/Repositories/UserRepositoryMock.php on line 47" while reading response header from upstream, client: 192.168.16.1, server: api.ciclomenstrual.test, request: "POST /login HTTP/1.1", upstream: "fastcgi://192.168.16.2:9000", host: "127.0.0.1"
+2023/10/19 22:48:08 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/10/19 22:48:08 [notice] 29#29: gracefully shutting down
+2023/10/19 22:48:08 [notice] 30#30: gracefully shutting down
+2023/10/19 22:48:08 [notice] 34#34: gracefully shutting down
+2023/10/19 22:48:08 [notice] 31#31: gracefully shutting down
+2023/10/19 22:48:08 [notice] 29#29: exiting
+2023/10/19 22:48:08 [notice] 30#30: exiting
+2023/10/19 22:48:08 [notice] 34#34: exiting
+2023/10/19 22:48:08 [notice] 31#31: exiting
+2023/10/19 22:48:08 [notice] 35#35: gracefully shutting down
+2023/10/19 22:48:08 [notice] 34#34: exit
+2023/10/19 22:48:08 [notice] 30#30: exit
+2023/10/19 22:48:08 [notice] 29#29: exit
+2023/10/19 22:48:08 [notice] 31#31: exit
+2023/10/19 22:48:08 [notice] 35#35: exiting
+2023/10/19 22:48:08 [notice] 32#32: gracefully shutting down
+2023/10/19 22:48:08 [notice] 32#32: exiting
+2023/10/19 22:48:08 [notice] 35#35: exit
+2023/10/19 22:48:08 [notice] 32#32: exit
+2023/10/19 22:48:08 [notice] 36#36: gracefully shutting down
+2023/10/19 22:48:08 [notice] 36#36: exiting
+2023/10/19 22:48:08 [notice] 33#33: gracefully shutting down
+2023/10/19 22:48:08 [notice] 36#36: exit
+2023/10/19 22:48:08 [notice] 33#33: exiting
+2023/10/19 22:48:08 [notice] 33#33: exit
+2023/10/19 22:48:08 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2023/10/19 22:48:08 [notice] 1#1: worker process 32 exited with code 0
+2023/10/19 22:48:08 [notice] 1#1: signal 29 (SIGIO) received
+2023/10/19 22:48:08 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2023/10/19 22:48:08 [notice] 1#1: worker process 31 exited with code 0
+2023/10/19 22:48:08 [notice] 1#1: worker process 34 exited with code 0
+2023/10/19 22:48:08 [notice] 1#1: worker process 35 exited with code 0
+2023/10/19 22:48:08 [notice] 1#1: worker process 36 exited with code 0
+2023/10/19 22:48:08 [notice] 1#1: signal 29 (SIGIO) received
+2023/10/19 22:48:08 [notice] 1#1: signal 17 (SIGCHLD) received from 35
+2023/10/19 22:48:08 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2023/10/19 22:48:08 [notice] 1#1: worker process 29 exited with code 0
+2023/10/19 22:48:08 [notice] 1#1: worker process 30 exited with code 0
+2023/10/19 22:48:08 [notice] 1#1: signal 29 (SIGIO) received
+2023/10/19 22:48:08 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2023/10/19 22:48:08 [notice] 1#1: worker process 33 exited with code 0
+2023/10/19 22:48:08 [notice] 1#1: exit

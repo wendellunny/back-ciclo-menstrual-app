@@ -12,12 +12,24 @@ use Zend\Diactoros\Response;
 
 class MenstrualDateRegisterController implements ControllerInterface
 {
+    /**
+     * Constructor method
+     *
+     * @param Response $response
+     * @param MenstrualDateRegisterInterface $menstrualDateRegister
+     */
     public function __construct(
         private Response $response,
         private MenstrualDateRegisterInterface $menstrualDateRegister
     ) {
     }
 
+    /**
+     * Execute method
+     *
+     * @param RequestInterface $request
+     * @return ResponseInterface
+     */
     public function execute(RequestInterface $request): ResponseInterface
     {
         $requestData = json_decode($request->getBody()->getContents());
