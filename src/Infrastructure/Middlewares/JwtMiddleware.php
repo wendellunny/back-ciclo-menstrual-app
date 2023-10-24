@@ -6,16 +6,14 @@ use CicloMenstrual\Infrastructure\Api\Middlewares\MiddlewareInterface;
 use CicloMenstrual\Infrastructure\Gateways\Jwt;
 use DateTimeImmutable;
 use Psr\Http\Message\RequestInterface;
-use Zend\Diactoros\Request;
 
 class JwtMiddleware implements MiddlewareInterface
 {
     public function __construct(private Jwt $jwt, private RequestInterface $request)
     {
-        
     }
 
-    public function handle(RequestInterface $request): void
+    public function handle(): void
     {
         if (! preg_match('/Bearer\s(\S+)/', $_SERVER['HTTP_AUTHORIZATION'], $matches)) {
             header('HTTP/1.0 400 Bad Request');

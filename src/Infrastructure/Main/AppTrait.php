@@ -40,7 +40,7 @@ trait AppTrait
                 'message' => $throw->getMessage(),
             ];
 
-            if(!$e instanceof LoginException) {
+            if(!$throw instanceof LoginException) {
                 $error['trace'] = $throw->getTrace();
             }
             echo json_encode($error);

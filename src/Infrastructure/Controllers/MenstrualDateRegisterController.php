@@ -4,7 +4,6 @@ namespace CicloMenstrual\Infrastructure\Controllers;
 
 use CicloMenstrual\Infrastructure\Api\Controllers\ControllerInterface;
 use CicloMenstrual\UseCases\Api\MenstrualCalendar\MenstrualDateRegisterInterface;
-use CicloMenstrual\UseCases\MenstrualCalendar\MenstrualDateRegister;
 use DateTimeImmutable;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -19,7 +18,8 @@ class MenstrualDateRegisterController implements ControllerInterface
      * @param MenstrualDateRegisterInterface $menstrualDateRegister
      */
     public function __construct(
-        private Response $response,
+        private RequestInterface $request,
+        private ResponseInterface $response,
         private MenstrualDateRegisterInterface $menstrualDateRegister
     ) {
     }
@@ -30,9 +30,9 @@ class MenstrualDateRegisterController implements ControllerInterface
      * @param RequestInterface $request
      * @return ResponseInterface
      */
-    public function execute(RequestInterface $request): ResponseInterface
+    public function execute(): ResponseInterface
     {
-        $requestData = json_decode($request->getBody()->getContents());
+        $requestData = json_decode($this->request->getBody()->getContents());
         $lastMenstrualDate = new DateTimeImmutable(
             $requestData->last_menstrual_date
         );

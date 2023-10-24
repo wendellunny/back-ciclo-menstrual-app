@@ -12,5 +12,5 @@ interface MiddlewareInterface
      * @param RequestInterface $request
      * @return void
      */
-    public function handle(RequestInterface $request): void;
+    public function handle(): void;
 }

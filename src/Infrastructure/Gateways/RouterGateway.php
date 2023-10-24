@@ -6,12 +6,10 @@ use Aura\Router\Map;
 use Aura\Router\RouterContainer;
 use CicloMenstrual\Infrastructure\Singleton;
 use DI\Container;
-use Psr\Http\Message\RequestInterface;
-use Zend\Diactoros\Response;
 use Zend\Diactoros\ServerRequest;
 use Zend\Diactoros\ServerRequestFactory;
 
-class Route extends Singleton
+class RouterGateway extends Singleton
 {
     /** @var Map $map */
     private Map $map;
@@ -60,13 +58,13 @@ class Route extends Singleton
     {
         $controller = $this->container->get($contrellerClass);
 
-        $this->map->get($route_name, $uri, function(RequestInterface $request) use($controller, $middlewares) {
-            array_walk($middlewares, function($middleware) use($request){
+        $this->map->get($route_name, $uri, function() use($controller, $middlewares) {
+            array_walk($middlewares, function($middleware){
                 $middlewareObject = $this->container->get($middleware);
-                $middlewareObject->handle($request);
+                $middlewareObject->handle();
             });
             
-            return $controller->execute($request);
+            return $controller->execute();
         });
     }
 
@@ -83,14 +81,14 @@ class Route extends Singleton
     {
         $controller = $this->container->get($contrellerClass);
         
-        $this->map->post($route_name, $uri, function(RequestInterface $request) use($controller, $middlewares)
+        $this->map->post($route_name, $uri, function() use($controller, $middlewares)
         {
-            array_walk($middlewares, function($middleware) use($request){
+            array_walk($middlewares, function($middleware){
                 $object = $this->container->get($middleware);
-                $object->handle($request);
+                $object->handle();
             });
             
-            return $controller->execute($request);
+            return $controller->execute();
         });
     }
 
@@ -115,8 +113,7 @@ class Route extends Singleton
         }
 
         $callable = $route->handler;
-        $response = new Response();
-        $response = $callable($this->request, $response);
+        $response = $callable();
 
         foreach ($response->getHeaders() as $name => $values) {
             foreach ($values as $value) {

@@ -551,3 +551,25 @@ Stack trace:
 2023/10/19 22:48:08 [notice] 1#1: signal 17 (SIGCHLD) received from 33
 2023/10/19 22:48:08 [notice] 1#1: worker process 33 exited with code 0
 2023/10/19 22:48:08 [notice] 1#1: exit
+2023/10/24 22:32:55 [notice] 1#1: using the "epoll" event method
+2023/10/24 22:32:55 [notice] 1#1: nginx/1.25.1
+2023/10/24 22:32:55 [notice] 1#1: built by gcc 12.2.1 20220924 (Alpine 12.2.1_git20220924-r4) 
+2023/10/24 22:32:55 [notice] 1#1: OS: Linux 6.2.0-33-generic
+2023/10/24 22:32:55 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/10/24 22:32:55 [notice] 1#1: start worker processes
+2023/10/24 22:32:55 [notice] 1#1: start worker process 29
+2023/10/24 22:32:55 [notice] 1#1: start worker process 30
+2023/10/24 22:32:55 [notice] 1#1: start worker process 31
+2023/10/24 22:32:55 [notice] 1#1: start worker process 32
+2023/10/24 22:32:55 [notice] 1#1: start worker process 33
+2023/10/24 22:32:55 [notice] 1#1: start worker process 34
+2023/10/24 22:32:55 [notice] 1#1: start worker process 35
+2023/10/24 22:32:55 [notice] 1#1: start worker process 36
+2023/10/24 22:33:40 [error] 31#31: *5 FastCGI sent in stderr: "PHP message: PHP Warning:  openssl_encrypt(): Using an empty Initialization Vector (iv) is potentially insecure and not recommended in /var/www/html/src/Infrastructure/Repositories/UserRepositoryMock.php on line 47" while reading response header from upstream, client: 192.168.32.1, server: api.ciclomenstrual.test, request: "POST /login HTTP/1.1", upstream: "fastcgi://192.168.32.2:9000", host: "127.0.0.1"
+2023/10/24 22:33:44 [error] 33#33: *7 FastCGI sent in stderr: "PHP message: PHP Warning:  Trying to access array offset on value of type null in /var/www/html/src/Infrastructure/Controllers/Auth/RegisterController.php on line 27; PHP message: PHP Warning:  Trying to access array offset on value of type null in /var/www/html/src/Infrastructure/Controllers/Auth/RegisterController.php on line 28; PHP message: PHP Warning:  Trying to access array offset on value of type null in /var/www/html/src/Infrastructure/Controllers/Auth/RegisterController.php on line 29; PHP message: PHP Warning:  Trying to access array offset on value of type null in /var/www/html/src/Infrastructure/Controllers/Auth/RegisterController.php on line 30" while reading response header from upstream, client: 192.168.32.1, server: api.ciclomenstrual.test, request: "POST /register HTTP/1.1", upstream: "fastcgi://192.168.32.2:9000", host: "127.0.0.1"
+2023/10/24 22:36:31 [error] 29#29: *17 FastCGI sent in stderr: "PHP message: PHP Warning:  Undefined array key "HTTP_AUTHORIZATION" in /var/www/html/src/Infrastructure/Middlewares/JwtMiddleware.php on line 20" while reading response header from upstream, client: 192.168.32.1, server: api.ciclomenstrual.test, request: "POST /menstrual-date/register HTTP/1.1", upstream: "fastcgi://192.168.32.2:9000", host: "127.0.0.1"
+2023/10/24 22:36:32 [error] 29#29: *19 FastCGI sent in stderr: "PHP message: PHP Warning:  Undefined array key "HTTP_AUTHORIZATION" in /var/www/html/src/Infrastructure/Middlewares/JwtMiddleware.php on line 20" while reading response header from upstream, client: 192.168.32.1, server: api.ciclomenstrual.test, request: "POST /menstrual-date/register HTTP/1.1", upstream: "fastcgi://192.168.32.2:9000", host: "127.0.0.1"
+2023/10/24 22:36:32 [error] 29#29: *21 FastCGI sent in stderr: "PHP message: PHP Warning:  Undefined array key "HTTP_AUTHORIZATION" in /var/www/html/src/Infrastructure/Middlewares/JwtMiddleware.php on line 20" while reading response header from upstream, client: 192.168.32.1, server: api.ciclomenstrual.test, request: "POST /menstrual-date/register HTTP/1.1", upstream: "fastcgi://192.168.32.2:9000", host: "127.0.0.1"
+2023/10/24 22:36:33 [error] 29#29: *23 FastCGI sent in stderr: "PHP message: PHP Warning:  Undefined array key "HTTP_AUTHORIZATION" in /var/www/html/src/Infrastructure/Middlewares/JwtMiddleware.php on line 20" while reading response header from upstream, client: 192.168.32.1, server: api.ciclomenstrual.test, request: "POST /menstrual-date/register HTTP/1.1", upstream: "fastcgi://192.168.32.2:9000", host: "127.0.0.1"
+2023/10/24 22:36:33 [error] 29#29: *25 FastCGI sent in stderr: "PHP message: PHP Warning:  Undefined array key "HTTP_AUTHORIZATION" in /var/www/html/src/Infrastructure/Middlewares/JwtMiddleware.php on line 20" while reading response header from upstream, client: 192.168.32.1, server: api.ciclomenstrual.test, request: "POST /menstrual-date/register HTTP/1.1", upstream: "fastcgi://192.168.32.2:9000", host: "127.0.0.1"
+2023/10/24 22:36:33 [error] 29#29: *27 FastCGI sent in stderr: "PHP message: PHP Warning:  Undefined array key "HTTP_AUTHORIZATION" in /var/www/html/src/Infrastructure/Middlewares/JwtMiddleware.php on line 20" while reading response header from upstream, client: 192.168.32.1, server: api.ciclomenstrual.test, request: "POST /menstrual-date/register HTTP/1.1", upstream: "fastcgi://192.168.32.2:9000", host: "127.0.0.1"

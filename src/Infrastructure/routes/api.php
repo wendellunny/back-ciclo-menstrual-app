@@ -4,11 +4,11 @@ use CicloMenstrual\Infrastructure\Controllers\Auth\LoginController;
 use CicloMenstrual\Infrastructure\Controllers\Auth\RegisterController;
 use CicloMenstrual\Infrastructure\Controllers\MenstrualCalendarController;
 use CicloMenstrual\Infrastructure\Controllers\MenstrualDateRegisterController;
-use CicloMenstrual\Infrastructure\Gateways\Route;
+use CicloMenstrual\Infrastructure\Gateways\RouterGateway;
 use CicloMenstrual\Infrastructure\Middlewares\JwtMiddleware;
 
 
-$route = Route::getInstance();
+$route = RouterGateway::getInstance();
 
 /**
  * Api Routes

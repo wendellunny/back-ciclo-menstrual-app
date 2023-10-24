@@ -18,7 +18,8 @@ class Singleton
         $subClass = static::class;
         
         if(!isset(self::$instances[$subClass])){
-            self::$instances[$subClass] = new $subClass();
+            self::$instances
+            [$subClass] = new $subClass();
         }
 
         return self::$instances[$subClass];

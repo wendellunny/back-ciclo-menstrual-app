@@ -7,20 +7,20 @@ use CicloMenstrual\UseCases\Authentication\Data\UserFactory;
 use CicloMenstrual\UseCases\Authentication\Registration;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use Zend\Diactoros\Response;
 
 class RegisterController implements ControllerInterface
 {
     public function __construct(
+        private RequestInterface $request,
+        private ResponseInterface $response,
         private UserFactory $userFactory,
         private Registration $registration,
-        private Response $response
     ) {
         
     }
-    public function execute(RequestInterface $request): ResponseInterface
+    public function execute(): ResponseInterface
     {
-        $bodyData = json_decode($request->getBody()->getContents(), true);
+        $bodyData = json_decode($this->request->getBody()->getContents(), true);
         $user = $this->userFactory->create([
             'id' => null,
             'name' => $bodyData['name'],
