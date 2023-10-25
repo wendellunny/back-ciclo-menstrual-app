@@ -27,8 +27,7 @@ trait AppTrait
 
     private function configureRoutes(ContainerInterface $diContainer): void
     {
-        $routerContainer = new RouterContainer();
-        $router = new Router($diContainer, $routerContainer);
+        $router = $diContainer->get(Router::class);
 
         $router->handle();
     }

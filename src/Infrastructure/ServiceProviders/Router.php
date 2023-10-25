@@ -2,20 +2,12 @@
 
 namespace CicloMenstrual\Infrastructure\ServiceProviders;
 
-use Aura\Router\RouterContainer;
-use CicloMenstrual\Infrastructure\Gateways\RouterGateway;
-use DI\Container;
-
+use CicloMenstrual\Infrastructure\Api\Gateways\RouterGatewayInterface;
 
 class Router
 {
-    private RouterGateway $route;
-
-    public function __construct(private Container $container, private RouterContainer $routerContainer)
+    public function __construct(private RouterGatewayInterface $route)
     {
-        $this->route = RouterGateway::getInstance();
-        
-        $this->route->init($this->routerContainer, $this->container);
     }
 
     public function handle(): void

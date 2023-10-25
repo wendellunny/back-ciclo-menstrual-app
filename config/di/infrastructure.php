@@ -1,5 +1,6 @@
 <?php
 
+use CicloMenstrual\Infrastructure\Api\Gateways\RouterGatewayInterface;
 use CicloMenstrual\Infrastructure\Gateways\RouterGateway;
 use CicloMenstrual\Infrastructure\Repositories\MenstrualDateRepositoryMock;
 use CicloMenstrual\Infrastructure\Repositories\UserRepositoryMock;
@@ -26,5 +27,5 @@ return [
     ),
     ResponseInterface::class => autowire(Response::class),
     UserRepositoryInterface::class => autowire(UserRepositoryMock::class),
-
+    RouterGatewayInterface::class => autowire(RouterGateway::class)
 ];
