@@ -6,7 +6,9 @@ use Aura\Router\Map;
 use Aura\Router\RouterContainer;
 use CicloMenstrual\Infrastructure\Api\Controllers\ControllerInterface;
 use CicloMenstrual\Infrastructure\Api\Gateways\RouterGatewayInterface;
+use CicloMenstrual\Infrastructure\Api\Middlewares\MiddlewareInterface;
 use DI\Container;
+use Exception;
 use Psr\Http\Message\RequestInterface;
 
 class RouterGateway implements RouterGatewayInterface
@@ -36,8 +38,12 @@ class RouterGateway implements RouterGatewayInterface
     {
         $this->map->get($route_name, $uri, function() use($controller, $middlewares) {
             array_walk($middlewares, function($middleware){
-                $middlewareObject = $this->container->get($middleware);
-                $middlewareObject->handle();
+                if(!$middleware instanceof MiddlewareInterface) {
+                    $class = MiddlewareInterface::class;
+                    throw new Exception("middleware must implements {$class}");
+                }
+
+                $middleware->handle();
             });
             
             return $controller->execute();
@@ -58,8 +64,12 @@ class RouterGateway implements RouterGatewayInterface
         $this->map->post($route_name, $uri, function() use($controller, $middlewares)
         {
             array_walk($middlewares, function($middleware){
-                $object = $this->container->get($middleware);
-                $object->handle();
+                if(!$middleware instanceof MiddlewareInterface) {
+                    $class = MiddlewareInterface::class;
+                    throw new Exception("middleware must implements {$class}");
+                }
+                
+                $middleware->handle();
             });
             
             return $controller->execute();

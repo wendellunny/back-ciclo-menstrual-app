@@ -7,24 +7,22 @@ use CicloMenstrual\Infrastructure\Controllers\MenstrualDateRegisterController;
 use CicloMenstrual\Infrastructure\Middlewares\JwtMiddleware;
 
 
-// TODO: Implementar uma forma de injetar o objeto diretamente na rota, tanto o controller como o middleware
-
 /**
  * Api Routes
  */
 
 $this->route->get(
     '/menstrual-calendar',
-    MenstrualCalendarController::class,
+    $this->container->get(MenstrualCalendarController::class),
     'menstrual-calendar',
-    [JwtMiddleware::class]
+    [$this->container->get(JwtMiddleware::class)]
 );
 $this->route->post(
     '/menstrual-date/register',
-    MenstrualDateRegisterController::class,
+    $this->container->get(MenstrualDateRegisterController::class),
     'menstrual-date-register',
-    [JwtMiddleware::class]
+    [$this->container->get(JwtMiddleware::class)]
 );
 
-$this->route->post('/login', LoginController::class, 'login');
-$this->route->post('/register', RegisterController::class, 'register');
+$this->route->post('/login', $this->container->get(LoginController::class), 'login');
+$this->route->post('/register', $this->container->get(RegisterController::class), 'register');

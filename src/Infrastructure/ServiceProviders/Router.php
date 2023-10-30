@@ -3,10 +3,11 @@
 namespace CicloMenstrual\Infrastructure\ServiceProviders;
 
 use CicloMenstrual\Infrastructure\Api\Gateways\RouterGatewayInterface;
+use Psr\Container\ContainerInterface;
 
 class Router
 {
-    public function __construct(private RouterGatewayInterface $route)
+    public function __construct(private RouterGatewayInterface $route, private ContainerInterface $container)
     {
     }
 
