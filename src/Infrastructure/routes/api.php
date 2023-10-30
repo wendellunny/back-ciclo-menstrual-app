@@ -10,7 +10,6 @@ use CicloMenstrual\Infrastructure\Middlewares\JwtMiddleware;
 /**
  * Api Routes
  */
-
 $this->route->get(
     '/menstrual-calendar',
     $this->container->get(MenstrualCalendarController::class),

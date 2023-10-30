@@ -22,6 +22,8 @@ class RouterGateway implements RouterGatewayInterface
         private RouterContainer $routerContainer,
         private Container $container
     ) {
+
+        // TODO: tirar a criação do objeto map daqui
         $this->map = $this->routerContainer->getMap();
     }
     
