@@ -2,14 +2,17 @@
 
 namespace Tests\Infrastructure\Gateways;
 
+use Aura\Router\Map;
 use Aura\Router\RouterContainer;
 use CicloMenstrual\Infrastructure\Api\Controllers\ControllerInterface;
 use CicloMenstrual\Infrastructure\Gateways\RouterGateway;
 use PHPUnit\Framework\TestCase;
 use DI\Container;
 use PHPUnit\Framework\MockObject\MockObject;
-use Psr\Http\Message\RequestInterface;
+use Psr\Http\Message\ServerRequestInterface as RequestInterface;
 use Psr\Http\Message\ResponseInterface;
+use Aura\Router\Route;
+use Aura\Router\Matcher;
 
 class RouterGatewayTest extends TestCase
 {
@@ -19,6 +22,9 @@ class RouterGatewayTest extends TestCase
     private MockObject|RequestInterface $requestMock;
     private MockObject|ResponseInterface $responseMock;
     private MockObject|ControllerInterface $controllerMock;
+    private MockObject|Map $mapMock;
+    private MockObject|Route $routeMock;
+    private MockObject|Matcher $matcherMock;
 
     public function setUp(): void
     {
@@ -33,6 +39,9 @@ class RouterGatewayTest extends TestCase
         $this->requestMock = $this->createMock(RequestInterface::class);
         $this->responseMock  = $this->createMock(ResponseInterface::class);
         $this->controllerMock = $this->createMock(ControllerInterface::class);
+        $this->mapMock = $this->createMock(Map::class);
+        $this->routeMock = $this->createMock(Route::class);
+        $this->matcherMock = $this->createMock(Matcher::class);
     }
 
     private function setInstance(): void
@@ -41,15 +50,45 @@ class RouterGatewayTest extends TestCase
     }
 
 
-    public function testPost(): void
+    /**
+     * @test
+     * @dataProvider dataProviderMethods
+     *
+     * @return void
+     */
+    public function testPost(string $method, string $routeName, string $uri): void
     {
-        $this->controllerMock
+        $this->routerContainerMock
             ->expects($this->once())
-            ->method('execute')
-            ->willReturn($this->responseMock);
+            ->method('getMap')
+            ->willReturn($this->mapMock);
+
+        $this->mapMock
+            ->expects($this->once())
+            ->method($method);
         
-        $response = $this->instance->post('/teste', $this->controllerMock, 'teste');
-        $this->assertEquals($this->responseMock, $response);
+        $this->instance->$method($uri, $this->controllerMock, $method);
+    }
+
+    /**
+     * Data provider
+     *
+     * @return array
+     */
+    public static function dataProviderMethods(): array
+    {
+        return [
+            'whenPost' => [
+                'method' => 'post',
+                'routeName' => 'teste',
+                'uri' => '/teste'
+            ],
+            'whenGet' => [
+                'method' => 'get',
+                'routeName' => 'teste',
+                'uri' => '/teste'
+            ]
+        ];
     }
     
 }

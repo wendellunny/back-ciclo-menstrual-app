@@ -22,9 +22,6 @@ class RouterGateway implements RouterGatewayInterface
         private RouterContainer $routerContainer,
         private Container $container
     ) {
-
-        // TODO: tirar a criação do objeto map daqui
-        $this->map = $this->routerContainer->getMap();
     }
     
     /**
@@ -38,7 +35,9 @@ class RouterGateway implements RouterGatewayInterface
      */
     public function get(string $uri, ControllerInterface $controller, string $route_name, $middlewares = []): void
     {
-        $this->map->get($route_name, $uri, function() use($controller, $middlewares) {
+        $map = $this->routerContainer->getMap();
+
+        $map->get($route_name, $uri, function() use($controller, $middlewares) {
             array_walk($middlewares, function($middleware){
                 if(!$middleware instanceof MiddlewareInterface) {
                     $class = MiddlewareInterface::class;
@@ -63,8 +62,9 @@ class RouterGateway implements RouterGatewayInterface
      */
     public function post(string $uri, ControllerInterface $controller, string $route_name, $middlewares = []): void
     {
-        $this->map->post($route_name, $uri, function() use($controller, $middlewares)
-        {
+        $map = $this->routerContainer->getMap();
+
+        $map->post($route_name, $uri, function() use($controller, $middlewares) {
             array_walk($middlewares, function($middleware){
                 if(!$middleware instanceof MiddlewareInterface) {
                     $class = MiddlewareInterface::class;
