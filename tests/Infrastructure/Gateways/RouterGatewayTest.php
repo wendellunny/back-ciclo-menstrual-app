@@ -20,7 +20,6 @@ class RouterGatewayTest extends TestCase
     private MockObject|RouterContainer $routerContainerMock;
     private MockObject|Container $containerMock;
     private MockObject|RequestInterface $requestMock;
-    private MockObject|ResponseInterface $responseMock;
     private MockObject|ControllerInterface $controllerMock;
     private MockObject|Map $mapMock;
     private MockObject|Route $routeMock;

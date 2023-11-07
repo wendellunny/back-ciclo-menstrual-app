@@ -1,14 +1,14 @@
 version: '3.1'
 services:
-  php-fpm:
-          container_name: ciclo-menstrual-php
-          build: ./.docker/php
-          working_dir: /var/www/html
-          volumes:
-              - '.:/var/www/html'
-              - './.docker/php/php-ini-overrides.ini:/etc/php/8.2/fpm/conf.d/99-overrides.ini'
+    php-fpm:
+        container_name: ciclo-menstrual-php
+        build: ./.docker/php
+        working_dir: /var/www/html
+        volumes:
+            - '.:/var/www/html'
+            - './.docker/php/php-ini-overrides.ini:/etc/php/8.2/fpm/conf.d/99-overrides.ini'
           
-  nginx:
+    nginx:
         container_name: ciclo-menstrual-nginx
         image: 'nginx:alpine'
         working_dir: /var/www/html
@@ -18,3 +18,23 @@ services:
             - './.docker/nginx/log:/var/log/nginx'
         ports:
             - '80:80'
+    db:
+        container_name: ciclo-menstrual-postgres
+        image: postgres
+        restart: always
+        working_dir: /var/www/html
+        volumes:
+            - ./:/var/www/html
+            - ./.docker/postgresql:/var/lib/postgresql
+        environment:
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+            POSTGRES_USER: ${POSTGRES_USER}
+            POSTGRES_DB: ${POSTGRES_DB}
+            PGDATA: /var/lib/postgresql/data/pgdata
+
+    adminer:
+        container_name: ciclo-menstrual-adminer
+        image: adminer
+        restart: always
+        ports:
+        - 8080:8080
