@@ -3,33 +3,54 @@
 namespace CicloMenstrual\Domain\MenstrualCalendar\Entities;
 
 use CicloMenstrual\Domain\MenstrualCalendar\Entities\Dtos\FertilePeriodData;
-
+use CicloMenstrual\Domain\MenstrualCalendar\Entities\Dtos\MenstruationData;
+use CicloMenstrual\Domain\MenstrualCalendar\Exception\EntityException;
 use DateInterval;
 
+/**
+ * Fertile period entity
+ */
 class FertilePeriod
 {
-  
-    public function __construct(private ?FertilePeriodData $data = null)
-    {
-    }
+    /**
+     * Fertile period data
+     *
+     * @var FertilePeriodData
+     */
+    private FertilePeriodData $data;
 
-    public function getData(): ?FertilePeriodData
+    /**
+     * Calculate
+     *
+     * @param MenstruationData $menstruationData
+     * @return self
+     */
+    public function calculate(MenstruationData $menstruationData): self
     {
-        return $this->data;
-    }
-
-    public function calculate($menstruation): self
-    {
-        $initialDate = $menstruation->getInitialDate()->add(
+        $initialDate = $menstruationData->getInitialDate()->add(
             DateInterval::createFromDateString('14 days')
         );
 
         $endDate = $initialDate->add(
             DateInterval::createFromDateString('5 days')
         );
+        
+        $this->data = new FertilePeriodData($initialDate, $endDate);
 
+        return $this;
+    }
 
-        // TODO: continuar refatoração;
-        return new FertilePeriod();
+    /**
+    * Get data
+    *
+    * @return FertilePeriodData
+    */
+    public function getData(): FertilePeriodData
+    {
+        if(!isset($this->data)) {
+            throw new EntityException('Before must calculate fertile period');
+        }
+        
+        return $this->data;
     }
 }
