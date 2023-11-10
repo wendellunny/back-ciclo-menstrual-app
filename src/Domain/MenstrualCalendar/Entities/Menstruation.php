@@ -25,10 +25,15 @@ class Menstruation
         return $this;
     }
 
+    /**
+     * Get data
+     *
+     * @return MenstruationData
+     */
     public function getData(): MenstruationData
     {
         if(!isset($this->data)) {
-            throw new EntityException('Before must calculate fertile period');
+            throw new EntityException('Before must calculate menstruation');
         }
         
         return $this->data;
