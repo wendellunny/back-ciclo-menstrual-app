@@ -5,7 +5,7 @@
     "autoload": {
         "psr-4": {
             "CicloMenstrual\\": "src/",
-            "Tests\\": "tests/"
+            "Tests\\": "tests/unit"
         }
     },
     "authors": [

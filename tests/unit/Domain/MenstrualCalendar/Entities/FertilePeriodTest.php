@@ -11,9 +11,6 @@ use DateTimeImmutable;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
-/**
- * Fertil period entity unit test
- */
 class FertilePeriodTest extends TestCase
 {
 
