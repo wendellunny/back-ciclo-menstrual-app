@@ -2,6 +2,9 @@
 
 namespace CicloMenstrual\Domain\MenstrualCalendar\UseCases;
 
+use CicloMenstrual\Domain\MenstrualCalendar\Entities\Factories\FertilePeriodFactory;
+use CicloMenstrual\Domain\MenstrualCalendar\Entities\Factories\LutealPhaseFactory;
+use CicloMenstrual\Domain\MenstrualCalendar\Entities\Factories\MenstruationFactory;
 use CicloMenstrual\Domain\MenstrualCalendar\Entities\FertilePeriod;
 use CicloMenstrual\Domain\MenstrualCalendar\Entities\LutealPhase;
 use CicloMenstrual\Domain\MenstrualCalendar\Entities\Menstruation;
@@ -13,6 +16,14 @@ use DateInterval;
  */
 class GetMenstrualCalendar
 {
+
+    public function __construct(
+        private MenstruationFactory     $menstruationFactory,
+        private FertilePeriodFactory    $fertilePeriodFactory,
+        private LutealPhaseFactory      $lutealPhaseFactory
+    ) {
+    }
+
     /**
      * Execute use case
      *
@@ -42,9 +53,9 @@ class GetMenstrualCalendar
      */
     private function buildCycle(MenstruationDate $initialDate): array
     {
-        $menstruation   = (new Menstruation)->calculate($initialDate)->getData();
-        $fertilePeriod  = (new FertilePeriod)->calculate($menstruation)->getData();
-        $lutealPhase    = (new LutealPhase)->calculate($fertilePeriod)->getData();
+        $menstruation   = $this->menstruationFactory->create()->calculate($initialDate)->getData();
+        $fertilePeriod  = $this->fertilePeriodFactory->create()->calculate($menstruation)->getData();
+        $lutealPhase    = $this->lutealPhaseFactory->create()->calculate($fertilePeriod)->getData();
 
         return [
             'menstruation'      => $menstruation,
