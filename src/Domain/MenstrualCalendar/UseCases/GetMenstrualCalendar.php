@@ -5,9 +5,6 @@ namespace CicloMenstrual\Domain\MenstrualCalendar\UseCases;
 use CicloMenstrual\Domain\MenstrualCalendar\Entities\Factories\FertilePeriodFactory;
 use CicloMenstrual\Domain\MenstrualCalendar\Entities\Factories\LutealPhaseFactory;
 use CicloMenstrual\Domain\MenstrualCalendar\Entities\Factories\MenstruationFactory;
-use CicloMenstrual\Domain\MenstrualCalendar\Entities\FertilePeriod;
-use CicloMenstrual\Domain\MenstrualCalendar\Entities\LutealPhase;
-use CicloMenstrual\Domain\MenstrualCalendar\Entities\Menstruation;
 use CicloMenstrual\Domain\MenstrualCalendar\Entities\MenstruationDate;
 use DateInterval;
 
