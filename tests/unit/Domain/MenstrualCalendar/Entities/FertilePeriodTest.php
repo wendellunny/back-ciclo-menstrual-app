@@ -14,7 +14,7 @@ use PHPUnit\Framework\TestCase;
 class FertilePeriodTest extends TestCase
 {
 
-    private FertilePeriod $instance;
+    private FertilePeriod               $instance;
     private MockObject|MenstruationData $menstruationDataMock;
 
     /**

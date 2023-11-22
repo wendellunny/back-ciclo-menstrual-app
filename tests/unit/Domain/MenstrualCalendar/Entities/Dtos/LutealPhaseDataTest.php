@@ -9,9 +9,9 @@ use PHPUnit\Framework\TestCase;
 class LutealPhaseDataTest extends TestCase
 {
 
-    private LutealPhaseData $instance;
-    private DateTimeImmutable $initialDate;
-    private DateTimeImmutable $endDate;
+    private LutealPhaseData     $instance;
+    private DateTimeImmutable   $initialDate;
+    private DateTimeImmutable   $endDate;
 
     /**
      * Set up
@@ -31,8 +31,8 @@ class LutealPhaseDataTest extends TestCase
      */
     private function setMocks(): void
     {
-        $this->initialDate = new DateTimeImmutable('2023-11-18');
-        $this->endDate = new DateTimeImmutable('2023-12-15');
+        $this->initialDate  = new DateTimeImmutable('2023-11-18');
+        $this->endDate      = new DateTimeImmutable('2023-12-15');
     }
 
     /**

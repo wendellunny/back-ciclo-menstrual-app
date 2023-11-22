@@ -13,7 +13,7 @@ use PHPUnit\Framework\TestCase;
 
 class MenstruationTest extends TestCase
 {
-    private Menstruation $instance;
+    private Menstruation                $instance;
     private MockObject|MenstruationDate $menstruationDateMock;
 
 

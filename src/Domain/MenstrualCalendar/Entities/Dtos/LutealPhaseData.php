@@ -15,8 +15,8 @@ class LutealPhaseData extends PhaseData
     public function jsonSerialize(): array
     {
         return [
-            'initial_date' => date_format($this->initialDate, 'Y-m-d'),
-            'end_date' => date_format($this->endDate, 'Y-m-d')
+            'initial_date'  => date_format($this->initialDate, 'Y-m-d'),
+            'end_date'      => date_format($this->endDate, 'Y-m-d')
         ];
     }
 }

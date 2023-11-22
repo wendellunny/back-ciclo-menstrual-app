@@ -13,8 +13,8 @@ use PHPUnit\Framework\TestCase;
 
 class LutealPhaseTest extends TestCase
 {
-    private LutealPhase $instance;
-    private MockObject|FertilePeriodData $fertilePeriodDataMock;
+    private LutealPhase                     $instance;
+    private MockObject|FertilePeriodData    $fertilePeriodDataMock;
     
     public function setUp(): void
     {

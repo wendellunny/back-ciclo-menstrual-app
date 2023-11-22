@@ -9,9 +9,9 @@ use PHPUnit\Framework\TestCase;
 class MenstruationDataTest extends TestCase
 {
 
-    private MenstruationData $instance;
-    private DateTimeImmutable $initialDate;
-    private DateTimeImmutable $endDate;
+    private MenstruationData    $instance;
+    private DateTimeImmutable   $initialDate;
+    private DateTimeImmutable   $endDate;
 
     /**
      * Set up
@@ -31,8 +31,8 @@ class MenstruationDataTest extends TestCase
      */
     private function setMocks(): void
     {
-        $this->initialDate = new DateTimeImmutable('2023-11-25');
-        $this->endDate = new DateTimeImmutable('2023-12-17');
+        $this->initialDate  = new DateTimeImmutable('2023-11-25');
+        $this->endDate      = new DateTimeImmutable('2023-12-17');
     }
 
     /**

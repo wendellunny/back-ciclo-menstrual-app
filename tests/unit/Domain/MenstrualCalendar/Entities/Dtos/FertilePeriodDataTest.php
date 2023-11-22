@@ -25,8 +25,8 @@ class FertilePeriodDataTest extends TestCase
 
     private function setMocks(): void
     {
-        $this->initialDate = new DateTimeImmutable('2023-11-13');
-        $this->endDate = new DateTimeImmutable('2023-12-13');
+        $this->initialDate  = new DateTimeImmutable('2023-11-13');
+        $this->endDate      = new DateTimeImmutable('2023-12-13');
     }
 
     /**
