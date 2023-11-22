@@ -75,8 +75,12 @@ class GetMenstrualCalendarTest extends TestCase
         );
     }
 
+    /**
+     * Test execute
+     *
+     * @return void
+     */
     public function testExecute(): void {
-        /** TODO: Refatorar testes */
         $this->menstruationDateMock
             ->expects($this->once())
             ->method('getInitial')
@@ -134,25 +138,26 @@ class GetMenstrualCalendarTest extends TestCase
             ->willReturnSelf();
     
 
-        $this->assertEquals([
-            0 => [
-                'menstruation'      => $this->menstruationDataMock,
-                'fertile_period'    => $this->fertilePeriodDataMock,
-                'luteal_phase'      => $this->lutealPhaseDataMock
-            ],
-            1 => [
-                'menstruation'      => $this->menstruationDataMock,
-                'fertile_period'    => $this->fertilePeriodDataMock,
-                'luteal_phase'      => $this->lutealPhaseDataMock
-            ],
-            2 => [
-                'menstruation'      => $this->menstruationDataMock,
-                'fertile_period'    => $this->fertilePeriodDataMock,
-                'luteal_phase'      => $this->lutealPhaseDataMock
-            ],
+        $this->assertEquals(
+            [
+                0 => [
+                    'menstruation'      => $this->menstruationDataMock,
+                    'fertile_period'    => $this->fertilePeriodDataMock,
+                    'luteal_phase'      => $this->lutealPhaseDataMock
+                ],
+                1 => [
+                    'menstruation'      => $this->menstruationDataMock,
+                    'fertile_period'    => $this->fertilePeriodDataMock,
+                    'luteal_phase'      => $this->lutealPhaseDataMock
+                ],
+                2 => [
+                    'menstruation'      => $this->menstruationDataMock,
+                    'fertile_period'    => $this->fertilePeriodDataMock,
+                    'luteal_phase'      => $this->lutealPhaseDataMock
+                ],
 
-        ],
-        $this->instance->execute($this->menstruationDateMock)
-    );
+            ],
+            $this->instance->execute($this->menstruationDateMock)
+        );
     }
 }
