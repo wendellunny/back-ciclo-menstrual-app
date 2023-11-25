@@ -33,10 +33,12 @@ class Login
         $user = $this->repository->findByEmail($loginData->getEmail());
 
         if ($user) {
-            $storedPassword = $this->getPasswordSalt($user, $loginData);
+            $storedPassword = $user->getPassword();
         }
+
+        $password = $user ? $this->getPasswordSalt($user, $loginData) : $loginData->getPassword();
         
-        return $this->verifyPassword($storedPassword, $user->getPassword())
+        return $this->verifyPassword($storedPassword, $password)
             && ($user !== null);
     }
 
@@ -47,7 +49,7 @@ class Login
      */
     private function generateFakePassword(): string
     {
-        $length = 5;
+        $length = 7;
         return substr(
             str_shuffle(
                 str_repeat(
