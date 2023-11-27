@@ -5,6 +5,8 @@ namespace CicloMenstrual\Domain\Authentication\Entities;
 class User
 {
     private string $uuid;
+    private string $name;
+    private string $birthDate;
     private string $email;
     private string $passwordHash;
 
@@ -28,6 +30,50 @@ class User
     public function getUuid(): string
     {
         return $this->uuid;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return self
+     */
+    public function setName(string $name): self
+    {
+        $this->name = $name;
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set birth date
+     *
+     * @param string $birthDate
+     * @return self
+     */
+    public function setBirthDate(string $birthDate): self
+    {
+        $this->birthDate = $birthDate;
+        return $this;
+    }
+
+    /**
+     * Get birth date
+     *
+     * @return string
+     */
+    public function getBirthDate(): string
+    {
+        return $this->birthDate;
     }
 
     /**

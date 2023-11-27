@@ -16,4 +16,12 @@ interface UserRepositoryInterface
      * @return User|null
      */
     public function findByEmail(string $email): ?User;
+
+    /**
+     * Save user
+     *
+     * @param User $user
+     * @return boolean
+     */
+    public function save(User $user): bool;
 }
