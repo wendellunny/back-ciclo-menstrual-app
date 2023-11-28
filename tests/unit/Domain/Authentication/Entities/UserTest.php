@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit\Domain\Authentication\Entities;
+namespace Tests\Domain\Authentication\Entities;
 
 use CicloMenstrual\Domain\Authentication\Entities\User;
 use PHPUnit\Framework\TestCase;
