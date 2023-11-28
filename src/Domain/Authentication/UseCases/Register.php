@@ -45,6 +45,13 @@ class Register
         $this->repository->save($user);
     }
 
+    /**
+     * Make password hash
+     *
+     * @param string $password
+     * @param string $uuid
+     * @return string
+     */
     private function makePasswordHash(string $password, string $uuid): string
     {
         $passwordSalt = "{$uuid}_{$password}";
