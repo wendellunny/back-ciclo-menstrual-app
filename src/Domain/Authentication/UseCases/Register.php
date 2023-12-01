@@ -1,8 +1,10 @@
 <?php
 
-namespace CicloMenstrual\Domain\Authentication\UserCases;
+namespace CicloMenstrual\Domain\Authentication\UseCases;
 
+use CicloMenstrual\Domain\Authentication\Config\AuthConfigInterface;
 use CicloMenstrual\Domain\Authentication\Entities\Dtos\RegisterData;
+use CicloMenstrual\Domain\Authentication\Entities\Factories\UserFactory;
 use CicloMenstrual\Domain\Authentication\Entities\User;
 use CicloMenstrual\Domain\Authentication\Repositories\UserRepositoryInterface;
 
@@ -14,11 +16,15 @@ class Register
     /**
      * Constructor method
      *
-     * @param UserRepositoryInterface $repository
+     * @param UserRepositoryInterface   $repository
+     * @param AuthConfigInterface       $config
+     * @param UserFactory               $factory
      */
-    public function __construct(private UserRepositoryInterface $repository)
-    {
-        
+    public function __construct(
+        private UserRepositoryInterface $repository,
+        private AuthConfigInterface     $config,
+        private UserFactory             $factory
+    ) {
     }
 
     /**
@@ -29,7 +35,11 @@ class Register
      */
     public function execute(RegisterData $registerData): void
     {
-        $user = new User();
+        /**
+         * @var User $user
+         */
+        $user = $this->factory->create();
+
         $uuid = uniqid();
         $user->setName($registerData->getName())
             ->setEmail($registerData->getEmail())
@@ -55,6 +65,8 @@ class Register
     private function makePasswordHash(string $password, string $uuid): string
     {
         $passwordSalt = "{$uuid}_{$password}";
-        return openssl_encrypt($passwordSalt, 'AES-256-CBC', $_ENV['APP_ENCRYPT_KEY']);
+        $hash = password_hash($passwordSalt, PASSWORD_BCRYPT);
+
+        return openssl_encrypt($hash, $this->config->getEncryptAlgorithm(), $this->config->getEncryptKey());
     }
 }

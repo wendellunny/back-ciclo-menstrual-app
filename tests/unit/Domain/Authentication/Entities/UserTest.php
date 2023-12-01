@@ -37,9 +37,9 @@ class UserTest extends TestCase
      * @test
      * @dataProvider dataProvider
      *
-     * @param string $getter
-     * @param string $setter
-     * @param mixed $value
+     * @param string    $getter
+     * @param string    $setter
+     * @param mixed     $value
      * @return void
      */
     public function testGettersAndSetters(string $getter, string $setter, mixed $value): void

@@ -2,6 +2,7 @@
 
 namespace Tests\Domain\Authentication\UseCases;
 
+use CicloMenstrual\Domain\Authentication\Config\AuthConfigInterface;
 use CicloMenstrual\Domain\Authentication\Entities\Dtos\LoginData;
 use CicloMenstrual\Domain\Authentication\Entities\User;
 use CicloMenstrual\Domain\Authentication\Repositories\UserRepositoryInterface;
@@ -9,12 +10,19 @@ use CicloMenstrual\Domain\Authentication\UseCases\Login;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Login Test
+ */
 class LoginTest extends TestCase
 {
-    private Login $instance;
-    private MockObject|UserRepositoryInterface $userRepositoryMock;
-    private MockObject|LoginData $loginDataMock;
-    private MockObject|User $userMock;
+
+    protected const                             ENCRYPT_ALGORITHM   = 'AES-256-CBC';
+    protected const                             ENCRYPT_KEY         = 'key_teste';
+    private Login                               $instance;
+    private MockObject|UserRepositoryInterface  $userRepositoryMock;
+    private MockObject|LoginData                $loginDataMock;
+    private MockObject|User                     $userMock;
+    private MockObject|AuthConfigInterface      $authConfigMock;
 
     /**
      * Set up method
@@ -34,9 +42,10 @@ class LoginTest extends TestCase
      */
     private function setMocks(): void
     {
-        $this->userRepositoryMock = $this->createMock(UserRepositoryInterface::class);
-        $this->loginDataMock = $this->createMock(LoginData::class);
-        $this->userMock = $this->createMock(User::class);
+        $this->userRepositoryMock   = $this->createMock(UserRepositoryInterface::class);
+        $this->loginDataMock        = $this->createMock(LoginData::class);
+        $this->userMock             = $this->createMock(User::class);
+        $this->authConfigMock       = $this->createMock(AuthConfigInterface::class);
     }
 
     /**
@@ -46,28 +55,31 @@ class LoginTest extends TestCase
      */
     private function setInstance(): void
     {
-        $this->instance = new Login($this->userRepositoryMock);
+        $this->instance = new Login(
+            $this->userRepositoryMock,
+            $this->authConfigMock
+        );
     }
 
     /**
      * @test
      * @dataProvider dataProvider
      *
-     * @param string $email
-     * @param boolean $hasUser
-     * @param string $passwordHash
-     * @param string $userUuid
-     * @param string $password
-     * @param boolean $areCorrectCredentials
+     * @param string    $email
+     * @param boolean   $hasUser
+     * @param string    $passwordHash
+     * @param string    $userUuid
+     * @param string    $password
+     * @param boolean   $areCorrectCredentials
      * @return void
      */
     public function testAuthenticate(
-        string $email,
-        bool $hasUser,
-        string $passwordHash,
-        string $userUuid,
-        string $password,
-        bool $areCorrectCredentials
+        string  $email,
+        bool    $hasUser,
+        ?string $passwordHash,
+        ?string $userUuid,
+        string  $password,
+        bool    $areCorrectCredentials
     ): void {
         $this->loginDataMock
             ->expects($this->once())
@@ -82,7 +94,7 @@ class LoginTest extends TestCase
 
         if($hasUser) {
             $this->userMock
-                ->expects($this->exactly(2))
+                ->expects($this->once())
                 ->method('getPassword')
                 ->willReturn($passwordHash);
 
@@ -90,12 +102,22 @@ class LoginTest extends TestCase
                 ->expects($this->once())
                 ->method('getUuid')
                 ->willReturn($userUuid);
-        } else {
-            $this->loginDataMock
-                ->expects($this->once())
-                ->method('getPassword')
-                ->willReturn($password);
         }
+
+        $this->loginDataMock
+            ->expects($this->once())
+            ->method('getPassword')
+            ->willReturn($password);
+        
+        $this->authConfigMock
+            ->expects($this->once())
+            ->method('getEncryptAlgorithm')
+            ->willReturn(static::ENCRYPT_ALGORITHM);
+
+        $this->authConfigMock
+            ->expects($this->once())
+            ->method('getEncryptKey')
+            ->willReturn(static::ENCRYPT_KEY);
 
         $this->assertEquals(
             $areCorrectCredentials,
@@ -103,16 +125,37 @@ class LoginTest extends TestCase
         );
     }
 
+    /**
+     * Undocumented function
+     *
+     * @return array
+     */
     public static function dataProvider(): array
     {
         return [
             'whenCorrectUserCredentials' => [
-                'email' => 'wendel@teste.com',
-                'hasUser' => true,
-                'passwordHash' => static::makePasswordHash($password = 'wendel123', $userUuid = 'useruuid'),
-                'userUuid' => $userUuid,
-                'password' => $password,
+                'email'                 => 'lunny@teste.com',
+                'hasUser'               => true,
+                'passwordHash'          => static::makePasswordHash($password = 'wendellunny123', $userUuid = 'useruuid'),
+                'userUuid'              => $userUuid,
+                'password'              => $password,
                 'areCorrectCredentials' => true
+            ],
+            'whenIncorrectPassword' => [
+                'email'                 => 'wendel@teste.com',
+                'hasUser'               => true,
+                'passwordHash'          => static::makePasswordHash('wendel123', $userUuid = 'useruuid'),
+                'userUuid'              => $userUuid,
+                'password'              => 'teste123',
+                'areCorrectCredentials' => false
+            ],
+            'whenEmailNotFound' => [
+                'email'                 => 'wendel@teste.com',
+                'hasUser'               => false,
+                'passwordHash'          => null,
+                'userUuid'              => null,
+                'password'              => 'teste123',
+                'areCorrectCredentials' => false
             ]
         ];
     }
@@ -127,6 +170,8 @@ class LoginTest extends TestCase
     private static function makePasswordHash(string $password, string $uuid): string
     {
         $passwordSalt = "{$uuid}_{$password}";
-        return openssl_encrypt($passwordSalt, 'AES-256-CBC', $_ENV['APP_ENCRYPT_KEY']);
+        $hash = password_hash($passwordSalt, PASSWORD_BCRYPT);
+        
+        return openssl_encrypt($hash, static::ENCRYPT_ALGORITHM, static::ENCRYPT_KEY);
     }
 }

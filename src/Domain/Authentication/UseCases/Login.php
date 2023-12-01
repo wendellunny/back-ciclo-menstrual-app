@@ -2,6 +2,7 @@
 
 namespace CicloMenstrual\Domain\Authentication\UseCases;
 
+use CicloMenstrual\Domain\Authentication\Config\AuthConfigInterface;
 use CicloMenstrual\Domain\Authentication\Entities\Dtos\LoginData;
 use CicloMenstrual\Domain\Authentication\Entities\User;
 use CicloMenstrual\Domain\Authentication\Repositories\UserRepositoryInterface;
@@ -17,7 +18,7 @@ class Login
      *
      * @param UserRepositoryInterface $repository
      */
-    public function __construct(private UserRepositoryInterface $repository)
+    public function __construct(private UserRepositoryInterface $repository, private AuthConfigInterface $config)
     {
     }
 
@@ -37,7 +38,7 @@ class Login
         }
 
         $password = $user ? $this->getPasswordSalt($user, $loginData) : $loginData->getPassword();
-        
+
         return $this->verifyPassword($storedPassword, $password)
             && ($user !== null);
     }
@@ -75,11 +76,12 @@ class Login
      */
     private function verifyPassword(string $storedPassword, string $password): bool
     {
-        /**
-         * TODO criar interface para o configurador
-         */
-        $decrypted = openssl_decrypt($password, 'AES-256-CBC', $_ENV['APP_ENCRYPT_KEY']);
-        
-        return password_verify($storedPassword, $decrypted);
+        $decrypted = openssl_decrypt(
+            $storedPassword,
+            $this->config->getEncryptAlgorithm(),
+            $this->config->getEncryptKey()
+        );
+
+        return password_verify($password, $decrypted);
     }
 }
