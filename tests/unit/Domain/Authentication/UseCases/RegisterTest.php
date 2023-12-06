@@ -149,7 +149,6 @@ class RegisterTest extends TestCase
 
     public static function dataProvider(): array
     {
-        /**TODO: corrigir warning */
         return [
             'whenSuccess' => [
                 'name' => 'John Doe',
