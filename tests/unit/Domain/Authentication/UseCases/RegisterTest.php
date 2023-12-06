@@ -27,12 +27,22 @@ class RegisterTest extends TestCase
     private MockObject|UserFactory $userFactoryMock;
     private MockObject|User $userMock;
 
+    /**
+     * Set up method
+     *
+     * @return void
+     */
     public function setUp(): void
     {
         $this->setMocks();
         $this->setInstance();
     }
 
+    /**
+     * Set mocks
+     *
+     * @return void
+     */
     private function setMocks(): void
     {
         $this->userRepositoryMock = $this->createMock(UserRepositoryInterface::class);
@@ -42,6 +52,11 @@ class RegisterTest extends TestCase
         $this->userMock = $this->createMock(User::class);
     }
 
+    /**
+     * Set instance
+     *
+     * @return void
+     */
     private function setInstance(): void
     {
         $this->instance = new Register($this->userRepositoryMock, $this->authConfigMock, $this->userFactoryMock);
@@ -128,9 +143,7 @@ class RegisterTest extends TestCase
             ->with($this->userMock)
             ->willReturn(true);
 
-      
         $this->instance->execute($this->registerDataMock);
- 
         
     }
 
