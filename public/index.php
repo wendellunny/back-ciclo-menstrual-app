@@ -2,7 +2,8 @@
 
 declare(strict_types=1);
 
-use CicloMenstrual\Infrastructure\Main\App;
+use CicloMenstrual\Infrastructure\App;
+use DI\ContainerBuilder;
 
 require_once
     __DIR__     . DIRECTORY_SEPARATOR
@@ -13,5 +14,14 @@ require_once
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR);
 $dotenv->safeLoad();
 
-$app = new App();
+$defintionsPath = __DIR__
+    . DIRECTORY_SEPARATOR . '..'
+    . DIRECTORY_SEPARATOR . 'config'
+    . DIRECTORY_SEPARATOR . 'di'
+    . DIRECTORY_SEPARATOR . '*.php';
+    
+$diConfigFiles = glob($defintionsPath);
+$containerBuilder = (new ContainerBuilder())->addDefinitions(...$diConfigFiles);
+
+$app = new App($containerBuilder->build());
 $app->start();
