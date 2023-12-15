@@ -5,23 +5,22 @@ use CicloMenstrual\Infrastructure\Controllers\Auth\RegisterController;
 use CicloMenstrual\Infrastructure\Controllers\MenstrualCalendarController;
 use CicloMenstrual\Infrastructure\Controllers\MenstrualDateRegisterController;
 use CicloMenstrual\Infrastructure\Middlewares\JwtMiddleware;
-
+use CicloMenstrual\Infrastructure\Services\Router\Route;
 
 /**
- * Api Routes
+ * @var Route $route
  */
-$this->route->get(
-    '/menstrual-calendar',
-    $this->container->get(MenstrualCalendarController::class),
-    'menstrual-calendar',
-    [$this->container->get(JwtMiddleware::class)]
+$route->get('
+    /menstrual-calendar',
+    [MenstrualCalendarController::class, 'execute'],
+    ['middlewares' => [$di->get(JwtMiddleware::class)]]
 );
-$this->route->post(
+$route->post(
     '/menstrual-date/register',
-    $this->container->get(MenstrualDateRegisterController::class),
-    'menstrual-date-register',
-    [$this->container->get(JwtMiddleware::class)]
+    [MenstrualDateRegisterController::class, 'execute'],
+    ['middlewares' => [$di->get(JwtMiddleware::class)]]
 );
 
-$this->route->post('/login', $this->container->get(LoginController::class), 'login');
-$this->route->post('/register', $this->container->get(RegisterController::class), 'register');
+$route->post('/login', [LoginController::class, 'execute']);
+
+$route->post('/register', [RegisterController::class, 'execute']);

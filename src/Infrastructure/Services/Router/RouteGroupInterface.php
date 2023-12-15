@@ -1,6 +1,6 @@
 <?php
 
-namespace CicloMenstrual\Infrastructure\Services;
+namespace CicloMenstrual\Infrastructure\Services\Router;
 
 use Closure;
 
