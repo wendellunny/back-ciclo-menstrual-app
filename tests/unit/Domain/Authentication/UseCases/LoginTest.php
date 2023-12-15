@@ -9,6 +9,7 @@ use CicloMenstrual\Domain\Authentication\Repositories\UserRepositoryInterface;
 use CicloMenstrual\Domain\Authentication\UseCases\Login;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\TestStatus\Warning;
 
 /**
  * Login Test
@@ -81,6 +82,7 @@ class LoginTest extends TestCase
         string  $password,
         bool    $areCorrectCredentials
     ): void {
+
         $this->loginDataMock
             ->expects($this->once())
             ->method('getEmail')
