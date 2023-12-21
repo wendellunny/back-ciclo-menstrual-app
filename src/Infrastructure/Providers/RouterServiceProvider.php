@@ -4,15 +4,22 @@ namespace CicloMenstrual\Infrastructure\Providers;
 
 use CicloMenstrual\Infrastructure\Services\Router\Router;
 
+/**
+ * Router service provider
+ */
 class RouterServiceProvider implements ProviderInterface
 {
-    
+    /**
+     * Constructor method
+     *
+     * @param Router $router
+     */
     public function __construct(private Router $router)
     {
-        
     }
+
     /**
-     * Provider
+     * Handle provider
      *
      * @return void
      */
