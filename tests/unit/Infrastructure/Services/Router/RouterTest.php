@@ -58,7 +58,7 @@ class RouterTest extends TestCase
     }
 
     /**
-     * Test configure and handle
+     * @test
      *
      * @return void
      */

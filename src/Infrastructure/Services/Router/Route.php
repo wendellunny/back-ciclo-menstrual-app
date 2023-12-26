@@ -19,7 +19,7 @@ class Route
         
         $middlewares = $options['middlewares'] ?? [];
 
-        $this->map->post($name, $path, $this->buildHandler($handler, $middlewares));
+        $this->map->get($name, $path, $this->buildHandler($handler, $middlewares));
     }
 
     public function post(string $path, array|Closure $handler, ?array $options = []): void
