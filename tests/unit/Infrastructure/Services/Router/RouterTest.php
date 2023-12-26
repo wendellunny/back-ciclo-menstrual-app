@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\RequestInterface;
 
 /**
- * Test to use CicloMenstrual\Infrastructure\Services\Router\Router class
+ * Test to CicloMenstrual\Infrastructure\Services\Router\Router class
  */
 class RouterTest extends TestCase
 {
