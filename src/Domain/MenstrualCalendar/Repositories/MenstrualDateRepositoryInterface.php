@@ -15,4 +15,11 @@ interface MenstrualDateRepositoryInterface
      * @return bool
      */
     public function save(MenstruationDate $menstruationDate): bool;
+
+    /**
+     * Load last menstrual date
+     *
+     * @return MenstruationDate
+     */
+    public function loadLast(): MenstruationDate;
 }
