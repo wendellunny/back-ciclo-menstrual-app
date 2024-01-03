@@ -6,6 +6,9 @@ use Firebase\JWT\JWT as JWTJWT;
 use Firebase\JWT\Key;
 use stdClass;
 
+/**
+ * Jwt service
+ */
 class Jwt
 {
     /**

@@ -26,9 +26,9 @@ class Login
      * Authenticate
      *
      * @param LoginData $loginData
-     * @return bool
+     * @return User|false
      */
-    public function authenticate(LoginData $loginData): bool
+    public function authenticate(LoginData $loginData): User|false
     {
         $storedPassword = $this->generateFakePassword();
         $user = $this->repository->findByEmail($loginData->getEmail());
@@ -39,8 +39,9 @@ class Login
 
         $password = $user ? $this->getPasswordSalt($user, $loginData) : $loginData->getPassword();
 
-        return $this->verifyPassword($storedPassword, $password)
-            && ($user !== null);
+        return $this->verifyPassword($storedPassword, $password) && ($user !== null) 
+            ? $user
+            : false;
     }
 
     /**

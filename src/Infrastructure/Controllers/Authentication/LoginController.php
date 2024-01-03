@@ -4,14 +4,15 @@ namespace CicloMenstrual\Infrastructure\Controllers\Authentication;
 
 use CicloMenstrual\Domain\Authentication\Entities\Dtos\LoginData;
 use CicloMenstrual\Domain\Authentication\Entities\Dtos\RegisterData;
+use CicloMenstrual\Domain\Authentication\Entities\User;
 use CicloMenstrual\Domain\Authentication\UseCases\Login;
 use CicloMenstrual\Domain\Authentication\UseCases\Register;
+use CicloMenstrual\Infrastructure\Gateways\Jwt;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
 /**
  * Login controller
- * TODO: Criar rota para este controller
  */
 class LoginController
 {
@@ -27,7 +28,8 @@ class LoginController
         private RequestInterface    $request,
         private ResponseInterface   $response,
         private Login               $login,
-        private Register            $register
+        private Register            $register,
+        private Jwt                 $jwt
     ) {
         
     }
@@ -39,15 +41,15 @@ class LoginController
      */
     public function login(): ResponseInterface
     {
-        /**
-         * TODO: Implementar JWT
-         */
         $body       = json_decode($this->request->getBody()->getContents());
         $loginData  = new LoginData($body->email, $body->password);
 
-        $message    = $this->login->authenticate($loginData)
-            ? ['message' => 'Logado com sucesso']
+        $user = $this->login->authenticate($loginData);
+
+        $message = $user
+            ? ['token' => $this->generateJwtToken($user)]
             : ['message' => 'Usuário ou senha incorretos'];
+    
 
         $this->response
             ->getBody()
@@ -96,5 +98,29 @@ class LoginController
          * TODO: Implementar lógica de logout
          */
         return $this->response;
+    }
+
+     /**
+     * Generate jwt key
+     *
+     * @param User $userSaved
+     * @return string
+     */
+    private function generateJwtToken (User $user): string
+    {
+        $iss = $this->request->getHeader('host')[0];
+        $iat  = time();
+        $exp = $iat + 3600;
+        $nbf = time();
+        $sub = [
+            'id' => $user->getUuid(),
+            'name' => $user->getName()
+        ];
+
+        $jti = uniqid();
+        
+        $jwtData = compact('iss', 'sub' ,'iat', 'exp', 'nbf', 'jti');
+
+        return $this->jwt->encode($jwtData);
     }
 }

@@ -1,9 +1,7 @@
 <?php
 
-use CicloMenstrual\Infrastructure\Controllers\Auth\LoginController;
-use CicloMenstrual\Infrastructure\Controllers\Auth\RegisterController;
+use CicloMenstrual\Infrastructure\Controllers\Authentication\LoginController;
 use CicloMenstrual\Infrastructure\Controllers\MenstrualCalendar\MenstrualCalendarController;
-use CicloMenstrual\Infrastructure\Controllers\MenstrualDateRegisterController;
 use CicloMenstrual\Infrastructure\Middlewares\JwtMiddleware;
 use CicloMenstrual\Infrastructure\Services\Router\Route;
 
@@ -21,6 +19,8 @@ $route->post(
     ['middlewares' => [$di->get(JwtMiddleware::class)]]
 );
 
-$route->post('/login', [LoginController::class, 'execute']);
+$route->post('/login', [LoginController::class, 'login']);
 
-$route->post('/register', [RegisterController::class, 'execute']);
+$route->post('/register', [LoginController::class, 'register']);
+
+$route->post('/logout', [LoginController::class, 'logout']);
