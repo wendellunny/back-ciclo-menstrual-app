@@ -4,6 +4,7 @@ namespace CicloMenstrual\Infrastructure\Services\Jwt;
 
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
+use stdClass;
 
 class Encoder implements JwtEncoderInterface
 {
@@ -27,6 +28,6 @@ class Encoder implements JwtEncoderInterface
      */
     public function decode(string $token): stdClass
     {
-        return JWT::decode($token, new Key($_ENV['JWT_KEY'], 'HS256'))
+        return JWT::decode($token, new Key($_ENV['JWT_KEY'], 'HS256'));
     }
 }

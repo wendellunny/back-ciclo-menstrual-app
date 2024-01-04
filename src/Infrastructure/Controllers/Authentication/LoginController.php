@@ -8,6 +8,7 @@ use CicloMenstrual\Domain\Authentication\Entities\User;
 use CicloMenstrual\Domain\Authentication\UseCases\Login;
 use CicloMenstrual\Domain\Authentication\UseCases\Register;
 use CicloMenstrual\Infrastructure\Gateways\Jwt;
+use CicloMenstrual\Infrastructure\Services\Jwt\JwtEncoderInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
@@ -29,7 +30,7 @@ class LoginController
         private ResponseInterface   $response,
         private Login               $login,
         private Register            $register,
-        private Jwt                 $jwt
+        private JwtEncoderInterface $jwt
     ) {
         
     }

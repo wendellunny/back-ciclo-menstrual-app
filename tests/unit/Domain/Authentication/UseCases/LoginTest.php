@@ -122,7 +122,7 @@ class LoginTest extends TestCase
             ->willReturn(static::ENCRYPT_KEY);
 
         $this->assertEquals(
-            $areCorrectCredentials,
+            $areCorrectCredentials ? $this->userMock : false,
             $this->instance->authenticate($this->loginDataMock)
         );
     }

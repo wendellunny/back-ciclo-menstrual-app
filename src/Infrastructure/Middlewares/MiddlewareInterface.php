@@ -1,6 +1,6 @@
 <?php
 
-namespace CicloMenstrual\Infrastructure\Api\Middlewares;
+namespace CicloMenstrual\Infrastructure\Middlewares;
 
 use Psr\Http\Message\RequestInterface;
 

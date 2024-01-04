@@ -2,18 +2,42 @@
 
 namespace CicloMenstrual\Infrastructure\Middlewares;
 
-use CicloMenstrual\Infrastructure\Api\Middlewares\MiddlewareInterface;
-use CicloMenstrual\Infrastructure\Gateways\Jwt;
+use CicloMenstrual\Infrastructure\Services\Jwt\JwtEncoderInterface;
 use DateTimeImmutable;
 use Psr\Http\Message\RequestInterface;
 
+/**
+ * Jwt middleware
+ */
 class JwtMiddleware implements MiddlewareInterface
 {
-    public function __construct(private Jwt $jwt, private RequestInterface $request)
+    /**
+     * Constructor method
+     *
+     * @param JwtEncoderInterface $jwt
+     * @param RequestInterface $request
+     */
+    public function __construct(private JwtEncoderInterface $jwt, private RequestInterface $request)
     {
     }
 
+    /**
+     * Handle
+     *
+     * @return void
+     */
     public function handle(): void
+    {
+        $token = $this->getToken();
+        $this->validateToken($token);
+    }
+
+    /**
+     * Get token
+     *
+     * @return string
+     */
+    private function getToken(): string
     {
         if (! preg_match('/Bearer\s(\S+)/', $_SERVER['HTTP_AUTHORIZATION'], $matches)) {
             header('HTTP/1.0 400 Bad Request');
@@ -21,14 +45,23 @@ class JwtMiddleware implements MiddlewareInterface
             exit;
         }
 
-        $jwt = $matches[1];
-        if (! $jwt) {
-            // No token was able to be extracted from the authorization header
+        return $matches[1];
+    }
+
+    /**
+     * Validate token
+     *
+     * @param string $token
+     * @return void
+     */
+    private function validateToken(string $token)
+    {
+        if (! $token) {
             header('HTTP/1.0 400 Bad Request');
             echo json_encode(['message' => 'Token not found in request']);
             exit;
         }
-        $token = $this->jwt->decode($jwt);
+        $token = $this->jwt->decode($token);
         $now = new DateTimeImmutable();
         $serverName = $this->request->getHeader('host')[0];
         
