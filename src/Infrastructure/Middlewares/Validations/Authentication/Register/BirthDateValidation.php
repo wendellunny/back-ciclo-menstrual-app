@@ -7,18 +7,18 @@ use CicloMenstrual\Infrastructure\Middlewares\Validations\RequestValidationInter
 use CicloMenstrual\Infrastructure\Services\Request\Trait\HasRequestFormatter;
 use Psr\Http\Message\RequestInterface;
 
-class NameValidation implements RequestValidationInterface
+class BirthDateValidation implements RequestValidationInterface
 {
     use HasRequestFormatter;
-    
+
     public function validate(RequestInterface $request): Errors
     {
         $errors = [];
         $body   = $this->getBody($request);
 
-        if(!$body->name || $body->name < 3)
+        if(!preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/", $body->birth_date))
         {
-            $errors[] = 'Invalid name';
+            $errors[] = 'Invalid date format';
         }
         
         return new Errors($errors);

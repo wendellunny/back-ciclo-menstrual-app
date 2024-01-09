@@ -9,6 +9,7 @@ use CicloMenstrual\Domain\Authentication\UseCases\Login;
 use CicloMenstrual\Domain\Authentication\UseCases\Register;
 use CicloMenstrual\Infrastructure\Gateways\Jwt;
 use CicloMenstrual\Infrastructure\Services\Jwt\JwtEncoderInterface;
+use CicloMenstrual\Infrastructure\Services\Request\Trait\HasRequestFormatter;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
@@ -17,6 +18,8 @@ use Psr\Http\Message\ResponseInterface;
  */
 class LoginController
 {
+    use HasRequestFormatter;
+
     /**
      * Constructor method
      *
@@ -42,7 +45,7 @@ class LoginController
      */
     public function login(): ResponseInterface
     {
-        $body       = json_decode($this->request->getBody()->getContents());
+        $body       = $this->getBody($this->request);
         $loginData  = new LoginData($body->email, $body->password);
 
         $user = $this->login->authenticate($loginData);

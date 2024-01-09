@@ -6,6 +6,7 @@ use CicloMenstrual\Domain\MenstrualCalendar\Entities\MenstruationDate;
 use CicloMenstrual\Domain\MenstrualCalendar\Repositories\MenstrualDateRepositoryInterface;
 use CicloMenstrual\Domain\MenstrualCalendar\UseCases\GetMenstrualCalendar;
 use CicloMenstrual\Domain\MenstrualCalendar\UseCases\InsertMenstrualDate;
+use CicloMenstrual\Infrastructure\Services\Request\Trait\HasRequestFormatter;
 use DateTimeImmutable;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -13,6 +14,8 @@ use Psr\Http\Message\ResponseInterface;
 
 class MenstrualCalendarController
 {
+    use HasRequestFormatter;
+
     public function __construct(
         private RequestInterface $request,
         private ResponseInterface $response,
@@ -29,7 +32,7 @@ class MenstrualCalendarController
      */
     public function show(): ResponseInterface
     {
-        $body                   = json_decode($this->request->getBody()->getContents());
+        $body                   = $this->getBody($this->request);
         $lastMenstrualDate      = $this->menstrualDaterepository->loadLast();
         $menstrualCalendarData  = $this->getMenstrualCalendar->execute($lastMenstrualDate, (int)$body->amount);
 
