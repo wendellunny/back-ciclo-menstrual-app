@@ -27,6 +27,6 @@ class AppServiceProvider implements ProviderInterface
     public function handle(): void
     {
         $this->databaseServiceProvider->handle();
-        $this->routerServiceProvider->handle(); 
+        $this->routerServiceProvider->handle();
     }
 }

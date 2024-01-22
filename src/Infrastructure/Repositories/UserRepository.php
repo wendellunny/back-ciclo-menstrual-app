@@ -7,6 +7,9 @@ use CicloMenstrual\Domain\Authentication\Repositories\UserRepositoryInterface;
 use CicloMenstrual\Infrastructure\Services\PostgreSQL\Connection;
 use PDO;
 
+/**
+ * User repository
+ */
 class UserRepository implements UserRepositoryInterface
 {
     private PDO $db;
@@ -24,7 +27,17 @@ class UserRepository implements UserRepositoryInterface
      */
     public function findByEmail(string $email): ?User
     {
-        return new User();
+        $statement = $this->db->prepare('SELECT FROM users WHERE email = :email');
+        $statement->bindParam('email', $email);
+        $statement->execute();
+
+        $user = $statement->fetchAll()[0];
+
+        return (new User())
+            ->setName($user['name'])
+            ->setBirthDate($user['birth_date'])
+            ->setEmail($user['email'])
+            ->setPassword($user['password']);
     }
 
     /**
@@ -35,8 +48,10 @@ class UserRepository implements UserRepositoryInterface
      */
     public function save(User $user): bool
     {
-        $this->db->query()
+        $statement = $this->db->prepare(
+            'INSERT INTO users (name, birth_date, email, password) VALUES (:name, :birth_date, :email, :password)'
+        );
 
-        return true;
+        return $statement->execute();
     }
 }
