@@ -4,6 +4,7 @@ namespace CicloMenstrual\Infrastructure;
 
 use CicloMenstrual\Infrastructure\Providers\AppServiceProvider;
 use Psr\Container\ContainerInterface;
+use Throwable;
 
 /**
  * App class
@@ -26,11 +27,22 @@ class App
      */
     public function start(): void
     {
-        /**
-         * @var AppServiceProvider $provider
-         */
-        $provider = $this->container->get(AppServiceProvider::class);
+        try {
+            /**
+             * @var AppServiceProvider $provider
+             */
+            $provider = $this->container->get(AppServiceProvider::class);
 
-        $provider->handle();
+            $provider->handle();
+
+        } catch(Throwable $e) {
+            echo json_encode([
+                'error' => $e->getMessage(),
+                'file' => $e->getFile() . ":" . $e->getLine(),
+                'code' => $e->getCode(),
+                'trace' => $e->getTrace(),
+            ]);
+        }
+        
     }
 }

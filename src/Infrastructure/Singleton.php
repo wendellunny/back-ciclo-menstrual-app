@@ -14,7 +14,8 @@ class Singleton
     public static function get(): self
     {
         if(!isset(self::$instance)) {
-            self::$instance = new self();
+            $class = get_called_class();
+            self::$instance = new $class();
         }
 
         return self::$instance;
