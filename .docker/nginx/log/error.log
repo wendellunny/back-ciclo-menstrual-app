@@ -120,3 +120,572 @@ Stack trace:
 2024/01/23 00:15:47 [notice] 1#1: start worker process 34
 2024/01/23 00:15:47 [notice] 1#1: start worker process 35
 2024/01/23 00:15:47 [notice] 1#1: start worker process 36
+2024/01/24 00:16:00 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2024/01/24 00:16:00 [notice] 32#32: gracefully shutting down
+2024/01/24 00:16:00 [notice] 31#31: gracefully shutting down
+2024/01/24 00:16:00 [notice] 32#32: exiting
+2024/01/24 00:16:00 [notice] 31#31: exiting
+2024/01/24 00:16:00 [notice] 35#35: gracefully shutting down
+2024/01/24 00:16:00 [notice] 36#36: gracefully shutting down
+2024/01/24 00:16:00 [notice] 35#35: exiting
+2024/01/24 00:16:00 [notice] 36#36: exiting
+2024/01/24 00:16:00 [notice] 33#33: gracefully shutting down
+2024/01/24 00:16:00 [notice] 29#29: gracefully shutting down
+2024/01/24 00:16:00 [notice] 34#34: gracefully shutting down
+2024/01/24 00:16:00 [notice] 33#33: exiting
+2024/01/24 00:16:00 [notice] 29#29: exiting
+2024/01/24 00:16:00 [notice] 34#34: exiting
+2024/01/24 00:16:00 [notice] 30#30: gracefully shutting down
+2024/01/24 00:16:00 [notice] 30#30: exiting
+2024/01/24 00:16:00 [notice] 29#29: exit
+2024/01/24 00:16:00 [notice] 35#35: exit
+2024/01/24 00:16:00 [notice] 36#36: exit
+2024/01/24 00:16:00 [notice] 33#33: exit
+2024/01/24 00:16:00 [notice] 30#30: exit
+2024/01/24 00:16:00 [notice] 31#31: exit
+2024/01/24 00:16:00 [notice] 34#34: exit
+2024/01/24 00:16:00 [notice] 32#32: exit
+2024/01/24 00:16:00 [notice] 1#1: signal 17 (SIGCHLD) received from 35
+2024/01/24 00:16:00 [notice] 1#1: worker process 31 exited with code 0
+2024/01/24 00:16:00 [notice] 1#1: worker process 32 exited with code 0
+2024/01/24 00:16:00 [notice] 1#1: worker process 34 exited with code 0
+2024/01/24 00:16:00 [notice] 1#1: worker process 35 exited with code 0
+2024/01/24 00:16:00 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:16:00 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2024/01/24 00:16:00 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2024/01/24 00:16:00 [notice] 1#1: worker process 29 exited with code 0
+2024/01/24 00:16:00 [notice] 1#1: worker process 30 exited with code 0
+2024/01/24 00:16:00 [notice] 1#1: worker process 36 exited with code 0
+2024/01/24 00:16:00 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:16:00 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2024/01/24 00:16:00 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2024/01/24 00:16:00 [notice] 1#1: worker process 33 exited with code 0
+2024/01/24 00:16:00 [notice] 1#1: exit
+2024/01/24 00:24:10 [notice] 1#1: using the "epoll" event method
+2024/01/24 00:24:10 [notice] 1#1: nginx/1.25.1
+2024/01/24 00:24:10 [notice] 1#1: built by gcc 12.2.1 20220924 (Alpine 12.2.1_git20220924-r4) 
+2024/01/24 00:24:10 [notice] 1#1: OS: Linux 6.2.0-36-generic
+2024/01/24 00:24:10 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2024/01/24 00:24:10 [notice] 1#1: start worker processes
+2024/01/24 00:24:10 [notice] 1#1: start worker process 29
+2024/01/24 00:24:10 [notice] 1#1: start worker process 30
+2024/01/24 00:24:10 [notice] 1#1: start worker process 31
+2024/01/24 00:24:10 [notice] 1#1: start worker process 32
+2024/01/24 00:24:10 [notice] 1#1: start worker process 33
+2024/01/24 00:24:10 [notice] 1#1: start worker process 34
+2024/01/24 00:24:10 [notice] 1#1: start worker process 35
+2024/01/24 00:24:10 [notice] 1#1: start worker process 36
+2024/01/24 00:27:01 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2024/01/24 00:27:01 [notice] 29#29: gracefully shutting down
+2024/01/24 00:27:01 [notice] 30#30: gracefully shutting down
+2024/01/24 00:27:01 [notice] 31#31: gracefully shutting down
+2024/01/24 00:27:01 [notice] 33#33: gracefully shutting down
+2024/01/24 00:27:01 [notice] 29#29: exiting
+2024/01/24 00:27:01 [notice] 30#30: exiting
+2024/01/24 00:27:01 [notice] 31#31: exiting
+2024/01/24 00:27:01 [notice] 33#33: exiting
+2024/01/24 00:27:01 [notice] 32#32: gracefully shutting down
+2024/01/24 00:27:01 [notice] 32#32: exiting
+2024/01/24 00:27:01 [notice] 33#33: exit
+2024/01/24 00:27:01 [notice] 29#29: exit
+2024/01/24 00:27:01 [notice] 30#30: exit
+2024/01/24 00:27:01 [notice] 31#31: exit
+2024/01/24 00:27:01 [notice] 32#32: exit
+2024/01/24 00:27:01 [notice] 35#35: gracefully shutting down
+2024/01/24 00:27:01 [notice] 35#35: exiting
+2024/01/24 00:27:01 [notice] 35#35: exit
+2024/01/24 00:27:01 [notice] 34#34: gracefully shutting down
+2024/01/24 00:27:01 [notice] 34#34: exiting
+2024/01/24 00:27:01 [notice] 34#34: exit
+2024/01/24 00:27:01 [notice] 36#36: gracefully shutting down
+2024/01/24 00:27:01 [notice] 36#36: exiting
+2024/01/24 00:27:01 [notice] 36#36: exit
+2024/01/24 00:27:01 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2024/01/24 00:27:01 [notice] 1#1: worker process 32 exited with code 0
+2024/01/24 00:27:01 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:27:01 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2024/01/24 00:27:01 [notice] 1#1: worker process 34 exited with code 0
+2024/01/24 00:27:01 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:27:01 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2024/01/24 00:27:01 [notice] 1#1: worker process 29 exited with code 0
+2024/01/24 00:27:01 [notice] 1#1: worker process 31 exited with code 0
+2024/01/24 00:27:01 [notice] 1#1: worker process 35 exited with code 0
+2024/01/24 00:27:01 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:27:01 [notice] 1#1: signal 17 (SIGCHLD) received from 36
+2024/01/24 00:27:01 [notice] 1#1: worker process 36 exited with code 0
+2024/01/24 00:27:01 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:27:01 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2024/01/24 00:27:01 [notice] 1#1: worker process 33 exited with code 0
+2024/01/24 00:27:01 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:27:01 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2024/01/24 00:27:01 [notice] 1#1: worker process 30 exited with code 0
+2024/01/24 00:27:01 [notice] 1#1: exit
+2024/01/24 00:27:34 [notice] 1#1: using the "epoll" event method
+2024/01/24 00:27:34 [notice] 1#1: nginx/1.25.1
+2024/01/24 00:27:34 [notice] 1#1: built by gcc 12.2.1 20220924 (Alpine 12.2.1_git20220924-r4) 
+2024/01/24 00:27:34 [notice] 1#1: OS: Linux 6.2.0-36-generic
+2024/01/24 00:27:34 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2024/01/24 00:27:34 [notice] 1#1: start worker processes
+2024/01/24 00:27:34 [notice] 1#1: start worker process 28
+2024/01/24 00:27:34 [notice] 1#1: start worker process 29
+2024/01/24 00:27:34 [notice] 1#1: start worker process 30
+2024/01/24 00:27:34 [notice] 1#1: start worker process 31
+2024/01/24 00:27:34 [notice] 1#1: start worker process 32
+2024/01/24 00:27:34 [notice] 1#1: start worker process 33
+2024/01/24 00:27:34 [notice] 1#1: start worker process 34
+2024/01/24 00:27:34 [notice] 1#1: start worker process 35
+2024/01/24 00:31:12 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2024/01/24 00:31:12 [notice] 29#29: gracefully shutting down
+2024/01/24 00:31:12 [notice] 30#30: gracefully shutting down
+2024/01/24 00:31:12 [notice] 32#32: gracefully shutting down
+2024/01/24 00:31:12 [notice] 34#34: gracefully shutting down
+2024/01/24 00:31:12 [notice] 29#29: exiting
+2024/01/24 00:31:12 [notice] 30#30: exiting
+2024/01/24 00:31:12 [notice] 32#32: exiting
+2024/01/24 00:31:12 [notice] 35#35: gracefully shutting down
+2024/01/24 00:31:12 [notice] 34#34: exiting
+2024/01/24 00:31:12 [notice] 35#35: exiting
+2024/01/24 00:31:12 [notice] 33#33: gracefully shutting down
+2024/01/24 00:31:12 [notice] 33#33: exiting
+2024/01/24 00:31:12 [notice] 32#32: exit
+2024/01/24 00:31:12 [notice] 29#29: exit
+2024/01/24 00:31:12 [notice] 30#30: exit
+2024/01/24 00:31:12 [notice] 35#35: exit
+2024/01/24 00:31:12 [notice] 34#34: exit
+2024/01/24 00:31:12 [notice] 31#31: gracefully shutting down
+2024/01/24 00:31:12 [notice] 33#33: exit
+2024/01/24 00:31:12 [notice] 31#31: exiting
+2024/01/24 00:31:12 [notice] 31#31: exit
+2024/01/24 00:31:12 [notice] 28#28: gracefully shutting down
+2024/01/24 00:31:12 [notice] 28#28: exiting
+2024/01/24 00:31:12 [notice] 28#28: exit
+2024/01/24 00:31:12 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2024/01/24 00:31:12 [notice] 1#1: worker process 30 exited with code 0
+2024/01/24 00:31:12 [notice] 1#1: worker process 31 exited with code 0
+2024/01/24 00:31:12 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:31:12 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2024/01/24 00:31:12 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2024/01/24 00:31:12 [notice] 1#1: worker process 29 exited with code 0
+2024/01/24 00:31:12 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:31:12 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2024/01/24 00:31:12 [notice] 1#1: worker process 33 exited with code 0
+2024/01/24 00:31:12 [notice] 1#1: worker process 32 exited with code 0
+2024/01/24 00:31:12 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:31:12 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2024/01/24 00:31:12 [notice] 1#1: signal 17 (SIGCHLD) received from 28
+2024/01/24 00:31:12 [notice] 1#1: worker process 28 exited with code 0
+2024/01/24 00:31:12 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:31:12 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2024/01/24 00:31:12 [notice] 1#1: worker process 34 exited with code 0
+2024/01/24 00:31:12 [notice] 1#1: signal 17 (SIGCHLD) received from 35
+2024/01/24 00:31:12 [notice] 1#1: worker process 35 exited with code 0
+2024/01/24 00:31:12 [notice] 1#1: exit
+2024/01/24 00:32:37 [notice] 1#1: using the "epoll" event method
+2024/01/24 00:32:37 [notice] 1#1: nginx/1.25.1
+2024/01/24 00:32:37 [notice] 1#1: built by gcc 12.2.1 20220924 (Alpine 12.2.1_git20220924-r4) 
+2024/01/24 00:32:37 [notice] 1#1: OS: Linux 6.2.0-36-generic
+2024/01/24 00:32:37 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2024/01/24 00:32:37 [notice] 1#1: start worker processes
+2024/01/24 00:32:37 [notice] 1#1: start worker process 29
+2024/01/24 00:32:37 [notice] 1#1: start worker process 30
+2024/01/24 00:32:37 [notice] 1#1: start worker process 31
+2024/01/24 00:32:37 [notice] 1#1: start worker process 32
+2024/01/24 00:32:37 [notice] 1#1: start worker process 33
+2024/01/24 00:32:37 [notice] 1#1: start worker process 34
+2024/01/24 00:32:37 [notice] 1#1: start worker process 35
+2024/01/24 00:32:37 [notice] 1#1: start worker process 36
+2024/01/24 00:33:35 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2024/01/24 00:33:35 [notice] 29#29: gracefully shutting down
+2024/01/24 00:33:35 [notice] 31#31: gracefully shutting down
+2024/01/24 00:33:35 [notice] 31#31: exiting
+2024/01/24 00:33:35 [notice] 30#30: gracefully shutting down
+2024/01/24 00:33:35 [notice] 33#33: gracefully shutting down
+2024/01/24 00:33:35 [notice] 29#29: exiting
+2024/01/24 00:33:35 [notice] 36#36: gracefully shutting down
+2024/01/24 00:33:35 [notice] 33#33: exiting
+2024/01/24 00:33:35 [notice] 36#36: exiting
+2024/01/24 00:33:35 [notice] 32#32: gracefully shutting down
+2024/01/24 00:33:35 [notice] 32#32: exiting
+2024/01/24 00:33:35 [notice] 31#31: exit
+2024/01/24 00:33:35 [notice] 29#29: exit
+2024/01/24 00:33:35 [notice] 33#33: exit
+2024/01/24 00:33:35 [notice] 36#36: exit
+2024/01/24 00:33:35 [notice] 32#32: exit
+2024/01/24 00:33:35 [notice] 35#35: gracefully shutting down
+2024/01/24 00:33:35 [notice] 35#35: exiting
+2024/01/24 00:33:35 [notice] 35#35: exit
+2024/01/24 00:33:35 [notice] 34#34: gracefully shutting down
+2024/01/24 00:33:35 [notice] 34#34: exiting
+2024/01/24 00:33:35 [notice] 34#34: exit
+2024/01/24 00:33:35 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2024/01/24 00:33:35 [notice] 1#1: worker process 32 exited with code 0
+2024/01/24 00:33:35 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:33:35 [notice] 1#1: signal 17 (SIGCHLD) received from 36
+2024/01/24 00:33:35 [notice] 1#1: worker process 36 exited with code 0
+2024/01/24 00:33:35 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:33:35 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2024/01/24 00:33:35 [notice] 1#1: worker process 33 exited with code 0
+2024/01/24 00:33:35 [notice] 1#1: worker process 34 exited with code 0
+2024/01/24 00:33:35 [notice] 1#1: worker process 35 exited with code 0
+2024/01/24 00:33:35 [notice] 1#1: worker process 29 exited with code 0
+2024/01/24 00:33:35 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:33:35 [notice] 1#1: signal 17 (SIGCHLD) received from 35
+2024/01/24 00:33:35 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2024/01/24 00:33:35 [notice] 1#1: worker process 31 exited with code 0
+2024/01/24 00:33:35 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:33:36 [notice] 30#30: exiting
+2024/01/24 00:33:36 [notice] 30#30: exit
+2024/01/24 00:33:36 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2024/01/24 00:33:36 [notice] 1#1: worker process 30 exited with code 0
+2024/01/24 00:33:36 [notice] 1#1: exit
+2024/01/24 00:33:53 [notice] 1#1: using the "epoll" event method
+2024/01/24 00:33:53 [notice] 1#1: nginx/1.25.1
+2024/01/24 00:33:53 [notice] 1#1: built by gcc 12.2.1 20220924 (Alpine 12.2.1_git20220924-r4) 
+2024/01/24 00:33:53 [notice] 1#1: OS: Linux 6.2.0-36-generic
+2024/01/24 00:33:53 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2024/01/24 00:33:53 [notice] 1#1: start worker processes
+2024/01/24 00:33:53 [notice] 1#1: start worker process 29
+2024/01/24 00:33:53 [notice] 1#1: start worker process 30
+2024/01/24 00:33:53 [notice] 1#1: start worker process 31
+2024/01/24 00:33:53 [notice] 1#1: start worker process 32
+2024/01/24 00:33:53 [notice] 1#1: start worker process 33
+2024/01/24 00:33:53 [notice] 1#1: start worker process 34
+2024/01/24 00:33:53 [notice] 1#1: start worker process 35
+2024/01/24 00:33:53 [notice] 1#1: start worker process 36
+2024/01/24 00:35:23 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2024/01/24 00:35:23 [notice] 29#29: gracefully shutting down
+2024/01/24 00:35:23 [notice] 35#35: gracefully shutting down
+2024/01/24 00:35:23 [notice] 29#29: exiting
+2024/01/24 00:35:23 [notice] 35#35: exiting
+2024/01/24 00:35:23 [notice] 34#34: gracefully shutting down
+2024/01/24 00:35:23 [notice] 32#32: gracefully shutting down
+2024/01/24 00:35:23 [notice] 30#30: gracefully shutting down
+2024/01/24 00:35:23 [notice] 32#32: exiting
+2024/01/24 00:35:23 [notice] 34#34: exiting
+2024/01/24 00:35:23 [notice] 30#30: exiting
+2024/01/24 00:35:23 [notice] 33#33: gracefully shutting down
+2024/01/24 00:35:23 [notice] 33#33: exiting
+2024/01/24 00:35:23 [notice] 31#31: gracefully shutting down
+2024/01/24 00:35:23 [notice] 31#31: exiting
+2024/01/24 00:35:23 [notice] 30#30: exit
+2024/01/24 00:35:23 [notice] 32#32: exit
+2024/01/24 00:35:23 [notice] 34#34: exit
+2024/01/24 00:35:23 [notice] 33#33: exit
+2024/01/24 00:35:23 [notice] 35#35: exit
+2024/01/24 00:35:23 [notice] 31#31: exit
+2024/01/24 00:35:23 [notice] 36#36: gracefully shutting down
+2024/01/24 00:35:23 [notice] 36#36: exiting
+2024/01/24 00:35:23 [notice] 29#29: exit
+2024/01/24 00:35:23 [notice] 36#36: exit
+2024/01/24 00:35:23 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2024/01/24 00:35:23 [notice] 1#1: worker process 31 exited with code 0
+2024/01/24 00:35:23 [notice] 1#1: worker process 32 exited with code 0
+2024/01/24 00:35:23 [notice] 1#1: worker process 33 exited with code 0
+2024/01/24 00:35:23 [notice] 1#1: worker process 34 exited with code 0
+2024/01/24 00:35:23 [notice] 1#1: worker process 35 exited with code 0
+2024/01/24 00:35:23 [notice] 1#1: worker process 36 exited with code 0
+2024/01/24 00:35:23 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:35:23 [notice] 1#1: signal 17 (SIGCHLD) received from 35
+2024/01/24 00:35:23 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2024/01/24 00:35:23 [notice] 1#1: worker process 29 exited with code 0
+2024/01/24 00:35:23 [notice] 1#1: worker process 30 exited with code 0
+2024/01/24 00:35:23 [notice] 1#1: exit
+2024/01/24 00:35:52 [notice] 1#1: using the "epoll" event method
+2024/01/24 00:35:52 [notice] 1#1: nginx/1.25.1
+2024/01/24 00:35:52 [notice] 1#1: built by gcc 12.2.1 20220924 (Alpine 12.2.1_git20220924-r4) 
+2024/01/24 00:35:52 [notice] 1#1: OS: Linux 6.2.0-36-generic
+2024/01/24 00:35:52 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2024/01/24 00:35:52 [notice] 1#1: start worker processes
+2024/01/24 00:35:52 [notice] 1#1: start worker process 30
+2024/01/24 00:35:52 [notice] 1#1: start worker process 31
+2024/01/24 00:35:52 [notice] 1#1: start worker process 32
+2024/01/24 00:35:52 [notice] 1#1: start worker process 33
+2024/01/24 00:35:52 [notice] 1#1: start worker process 34
+2024/01/24 00:35:52 [notice] 1#1: start worker process 35
+2024/01/24 00:35:52 [notice] 1#1: start worker process 36
+2024/01/24 00:35:52 [notice] 1#1: start worker process 37
+2024/01/24 00:36:22 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2024/01/24 00:36:22 [notice] 30#30: gracefully shutting down
+2024/01/24 00:36:22 [notice] 37#37: gracefully shutting down
+2024/01/24 00:36:22 [notice] 37#37: exiting
+2024/01/24 00:36:22 [notice] 30#30: exiting
+2024/01/24 00:36:22 [notice] 37#37: exit
+2024/01/24 00:36:22 [notice] 30#30: exit
+2024/01/24 00:36:22 [notice] 31#31: gracefully shutting down
+2024/01/24 00:36:22 [notice] 32#32: gracefully shutting down
+2024/01/24 00:36:22 [notice] 32#32: exiting
+2024/01/24 00:36:22 [notice] 33#33: gracefully shutting down
+2024/01/24 00:36:22 [notice] 33#33: exiting
+2024/01/24 00:36:22 [notice] 35#35: gracefully shutting down
+2024/01/24 00:36:22 [notice] 35#35: exiting
+2024/01/24 00:36:22 [notice] 33#33: exit
+2024/01/24 00:36:22 [notice] 35#35: exit
+2024/01/24 00:36:22 [notice] 32#32: exit
+2024/01/24 00:36:22 [notice] 36#36: gracefully shutting down
+2024/01/24 00:36:22 [notice] 36#36: exiting
+2024/01/24 00:36:22 [notice] 34#34: gracefully shutting down
+2024/01/24 00:36:22 [notice] 34#34: exiting
+2024/01/24 00:36:22 [notice] 36#36: exit
+2024/01/24 00:36:22 [notice] 34#34: exit
+2024/01/24 00:36:22 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2024/01/24 00:36:22 [notice] 1#1: worker process 33 exited with code 0
+2024/01/24 00:36:22 [notice] 1#1: worker process 34 exited with code 0
+2024/01/24 00:36:22 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:36:22 [notice] 1#1: signal 17 (SIGCHLD) received from 36
+2024/01/24 00:36:22 [notice] 1#1: worker process 35 exited with code 0
+2024/01/24 00:36:22 [notice] 1#1: worker process 36 exited with code 0
+2024/01/24 00:36:22 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:36:22 [notice] 1#1: signal 17 (SIGCHLD) received from 35
+2024/01/24 00:36:22 [notice] 1#1: worker process 30 exited with code 0
+2024/01/24 00:36:22 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:36:22 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2024/01/24 00:36:22 [notice] 1#1: worker process 32 exited with code 0
+2024/01/24 00:36:22 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:36:22 [notice] 1#1: signal 17 (SIGCHLD) received from 37
+2024/01/24 00:36:22 [notice] 1#1: worker process 37 exited with code 0
+2024/01/24 00:36:22 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:36:22 [notice] 31#31: exiting
+2024/01/24 00:36:22 [notice] 31#31: exit
+2024/01/24 00:36:22 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2024/01/24 00:36:22 [notice] 1#1: worker process 31 exited with code 0
+2024/01/24 00:36:22 [notice] 1#1: exit
+2024/01/24 00:36:36 [notice] 1#1: using the "epoll" event method
+2024/01/24 00:36:36 [notice] 1#1: nginx/1.25.1
+2024/01/24 00:36:36 [notice] 1#1: built by gcc 12.2.1 20220924 (Alpine 12.2.1_git20220924-r4) 
+2024/01/24 00:36:36 [notice] 1#1: OS: Linux 6.2.0-36-generic
+2024/01/24 00:36:36 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2024/01/24 00:36:36 [notice] 1#1: start worker processes
+2024/01/24 00:36:36 [notice] 1#1: start worker process 29
+2024/01/24 00:36:36 [notice] 1#1: start worker process 30
+2024/01/24 00:36:36 [notice] 1#1: start worker process 31
+2024/01/24 00:36:36 [notice] 1#1: start worker process 32
+2024/01/24 00:36:36 [notice] 1#1: start worker process 33
+2024/01/24 00:36:36 [notice] 1#1: start worker process 34
+2024/01/24 00:36:36 [notice] 1#1: start worker process 35
+2024/01/24 00:36:36 [notice] 1#1: start worker process 36
+2024/01/24 00:42:27 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2024/01/24 00:42:27 [notice] 31#31: gracefully shutting down
+2024/01/24 00:42:27 [notice] 31#31: exiting
+2024/01/24 00:42:27 [notice] 35#35: gracefully shutting down
+2024/01/24 00:42:27 [notice] 36#36: gracefully shutting down
+2024/01/24 00:42:27 [notice] 35#35: exiting
+2024/01/24 00:42:27 [notice] 36#36: exiting
+2024/01/24 00:42:27 [notice] 31#31: exit
+2024/01/24 00:42:27 [notice] 36#36: exit
+2024/01/24 00:42:27 [notice] 35#35: exit
+2024/01/24 00:42:27 [notice] 33#33: gracefully shutting down
+2024/01/24 00:42:27 [notice] 33#33: exiting
+2024/01/24 00:42:27 [notice] 33#33: exit
+2024/01/24 00:42:27 [notice] 32#32: gracefully shutting down
+2024/01/24 00:42:27 [notice] 32#32: exiting
+2024/01/24 00:42:27 [notice] 34#34: gracefully shutting down
+2024/01/24 00:42:27 [notice] 34#34: exiting
+2024/01/24 00:42:27 [notice] 32#32: exit
+2024/01/24 00:42:27 [notice] 30#30: gracefully shutting down
+2024/01/24 00:42:27 [notice] 34#34: exit
+2024/01/24 00:42:27 [notice] 30#30: exiting
+2024/01/24 00:42:27 [notice] 29#29: gracefully shutting down
+2024/01/24 00:42:27 [notice] 29#29: exiting
+2024/01/24 00:42:27 [notice] 30#30: exit
+2024/01/24 00:42:27 [notice] 29#29: exit
+2024/01/24 00:42:27 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2024/01/24 00:42:27 [notice] 1#1: worker process 30 exited with code 0
+2024/01/24 00:42:27 [notice] 1#1: worker process 31 exited with code 0
+2024/01/24 00:42:27 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:42:27 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2024/01/24 00:42:27 [notice] 1#1: worker process 32 exited with code 0
+2024/01/24 00:42:27 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:42:27 [notice] 1#1: signal 17 (SIGCHLD) received from 35
+2024/01/24 00:42:27 [notice] 1#1: worker process 35 exited with code 0
+2024/01/24 00:42:27 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:42:27 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2024/01/24 00:42:27 [notice] 1#1: worker process 33 exited with code 0
+2024/01/24 00:42:27 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:42:27 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2024/01/24 00:42:27 [notice] 1#1: worker process 34 exited with code 0
+2024/01/24 00:42:27 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:42:27 [notice] 1#1: signal 17 (SIGCHLD) received from 36
+2024/01/24 00:42:27 [notice] 1#1: worker process 36 exited with code 0
+2024/01/24 00:42:27 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:42:27 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2024/01/24 00:42:27 [notice] 1#1: worker process 29 exited with code 0
+2024/01/24 00:42:27 [notice] 1#1: exit
+2024/01/24 00:42:33 [notice] 1#1: using the "epoll" event method
+2024/01/24 00:42:33 [notice] 1#1: nginx/1.25.1
+2024/01/24 00:42:33 [notice] 1#1: built by gcc 12.2.1 20220924 (Alpine 12.2.1_git20220924-r4) 
+2024/01/24 00:42:33 [notice] 1#1: OS: Linux 6.2.0-36-generic
+2024/01/24 00:42:33 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2024/01/24 00:42:33 [notice] 1#1: start worker processes
+2024/01/24 00:42:33 [notice] 1#1: start worker process 29
+2024/01/24 00:42:33 [notice] 1#1: start worker process 30
+2024/01/24 00:42:33 [notice] 1#1: start worker process 31
+2024/01/24 00:42:33 [notice] 1#1: start worker process 32
+2024/01/24 00:42:33 [notice] 1#1: start worker process 33
+2024/01/24 00:42:33 [notice] 1#1: start worker process 34
+2024/01/24 00:42:33 [notice] 1#1: start worker process 35
+2024/01/24 00:42:33 [notice] 1#1: start worker process 36
+2024/01/24 00:50:47 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2024/01/24 00:50:47 [notice] 30#30: gracefully shutting down
+2024/01/24 00:50:47 [notice] 31#31: gracefully shutting down
+2024/01/24 00:50:47 [notice] 30#30: exiting
+2024/01/24 00:50:47 [notice] 32#32: gracefully shutting down
+2024/01/24 00:50:47 [notice] 31#31: exiting
+2024/01/24 00:50:47 [notice] 33#33: gracefully shutting down
+2024/01/24 00:50:47 [notice] 32#32: exiting
+2024/01/24 00:50:47 [notice] 33#33: exiting
+2024/01/24 00:50:47 [notice] 34#34: gracefully shutting down
+2024/01/24 00:50:47 [notice] 34#34: exiting
+2024/01/24 00:50:47 [notice] 31#31: exit
+2024/01/24 00:50:47 [notice] 30#30: exit
+2024/01/24 00:50:47 [notice] 32#32: exit
+2024/01/24 00:50:47 [notice] 33#33: exit
+2024/01/24 00:50:47 [notice] 34#34: exit
+2024/01/24 00:50:47 [notice] 29#29: gracefully shutting down
+2024/01/24 00:50:47 [notice] 29#29: exiting
+2024/01/24 00:50:47 [notice] 29#29: exit
+2024/01/24 00:50:47 [notice] 35#35: gracefully shutting down
+2024/01/24 00:50:47 [notice] 35#35: exiting
+2024/01/24 00:50:47 [notice] 35#35: exit
+2024/01/24 00:50:47 [notice] 36#36: gracefully shutting down
+2024/01/24 00:50:47 [notice] 36#36: exiting
+2024/01/24 00:50:47 [notice] 36#36: exit
+2024/01/24 00:50:47 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2024/01/24 00:50:47 [notice] 1#1: worker process 32 exited with code 0
+2024/01/24 00:50:47 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:50:47 [notice] 1#1: signal 17 (SIGCHLD) received from 36
+2024/01/24 00:50:47 [notice] 1#1: worker process 36 exited with code 0
+2024/01/24 00:50:47 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:50:47 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2024/01/24 00:50:47 [notice] 1#1: worker process 31 exited with code 0
+2024/01/24 00:50:47 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:50:47 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2024/01/24 00:50:47 [notice] 1#1: worker process 29 exited with code 0
+2024/01/24 00:50:47 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:50:47 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2024/01/24 00:50:47 [notice] 1#1: worker process 30 exited with code 0
+2024/01/24 00:50:47 [notice] 1#1: worker process 33 exited with code 0
+2024/01/24 00:50:47 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:50:47 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2024/01/24 00:50:47 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2024/01/24 00:50:47 [notice] 1#1: worker process 34 exited with code 0
+2024/01/24 00:50:47 [notice] 1#1: worker process 35 exited with code 0
+2024/01/24 00:50:47 [notice] 1#1: exit
+2024/01/24 00:51:38 [notice] 1#1: using the "epoll" event method
+2024/01/24 00:51:38 [notice] 1#1: nginx/1.25.1
+2024/01/24 00:51:38 [notice] 1#1: built by gcc 12.2.1 20220924 (Alpine 12.2.1_git20220924-r4) 
+2024/01/24 00:51:38 [notice] 1#1: OS: Linux 6.2.0-36-generic
+2024/01/24 00:51:38 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2024/01/24 00:51:38 [notice] 1#1: start worker processes
+2024/01/24 00:51:38 [notice] 1#1: start worker process 28
+2024/01/24 00:51:38 [notice] 1#1: start worker process 29
+2024/01/24 00:51:38 [notice] 1#1: start worker process 30
+2024/01/24 00:51:38 [notice] 1#1: start worker process 31
+2024/01/24 00:51:38 [notice] 1#1: start worker process 32
+2024/01/24 00:51:38 [notice] 1#1: start worker process 33
+2024/01/24 00:51:38 [notice] 1#1: start worker process 34
+2024/01/24 00:51:38 [notice] 1#1: start worker process 35
+2024/01/24 00:52:19 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2024/01/24 00:52:19 [notice] 32#32: gracefully shutting down
+2024/01/24 00:52:19 [notice] 32#32: exiting
+2024/01/24 00:52:19 [notice] 28#28: gracefully shutting down
+2024/01/24 00:52:19 [notice] 28#28: exiting
+2024/01/24 00:52:19 [notice] 32#32: exit
+2024/01/24 00:52:19 [notice] 28#28: exit
+2024/01/24 00:52:19 [notice] 29#29: gracefully shutting down
+2024/01/24 00:52:19 [notice] 29#29: exiting
+2024/01/24 00:52:19 [notice] 29#29: exit
+2024/01/24 00:52:19 [notice] 30#30: gracefully shutting down
+2024/01/24 00:52:19 [notice] 30#30: exiting
+2024/01/24 00:52:19 [notice] 33#33: gracefully shutting down
+2024/01/24 00:52:19 [notice] 30#30: exit
+2024/01/24 00:52:19 [notice] 31#31: gracefully shutting down
+2024/01/24 00:52:19 [notice] 33#33: exiting
+2024/01/24 00:52:19 [notice] 31#31: exiting
+2024/01/24 00:52:19 [notice] 34#34: gracefully shutting down
+2024/01/24 00:52:19 [notice] 34#34: exiting
+2024/01/24 00:52:19 [notice] 35#35: gracefully shutting down
+2024/01/24 00:52:19 [notice] 35#35: exiting
+2024/01/24 00:52:19 [notice] 33#33: exit
+2024/01/24 00:52:19 [notice] 31#31: exit
+2024/01/24 00:52:19 [notice] 34#34: exit
+2024/01/24 00:52:19 [notice] 35#35: exit
+2024/01/24 00:52:19 [notice] 1#1: signal 17 (SIGCHLD) received from 28
+2024/01/24 00:52:19 [notice] 1#1: worker process 28 exited with code 0
+2024/01/24 00:52:19 [notice] 1#1: worker process 29 exited with code 0
+2024/01/24 00:52:19 [notice] 1#1: worker process 31 exited with code 0
+2024/01/24 00:52:19 [notice] 1#1: worker process 35 exited with code 0
+2024/01/24 00:52:19 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:52:19 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2024/01/24 00:52:19 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2024/01/24 00:52:19 [notice] 1#1: worker process 33 exited with code 0
+2024/01/24 00:52:19 [notice] 1#1: worker process 34 exited with code 0
+2024/01/24 00:52:19 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:52:19 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2024/01/24 00:52:19 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2024/01/24 00:52:19 [notice] 1#1: worker process 30 exited with code 0
+2024/01/24 00:52:19 [notice] 1#1: signal 29 (SIGIO) received
+2024/01/24 00:52:19 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2024/01/24 00:52:19 [notice] 1#1: worker process 32 exited with code 0
+2024/01/24 00:52:19 [notice] 1#1: exit
+2024/01/24 00:52:47 [notice] 1#1: using the "epoll" event method
+2024/01/24 00:52:47 [notice] 1#1: nginx/1.25.1
+2024/01/24 00:52:47 [notice] 1#1: built by gcc 12.2.1 20220924 (Alpine 12.2.1_git20220924-r4) 
+2024/01/24 00:52:47 [notice] 1#1: OS: Linux 6.2.0-36-generic
+2024/01/24 00:52:47 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2024/01/24 00:52:47 [notice] 1#1: start worker processes
+2024/01/24 00:52:47 [notice] 1#1: start worker process 29
+2024/01/24 00:52:47 [notice] 1#1: start worker process 30
+2024/01/24 00:52:47 [notice] 1#1: start worker process 31
+2024/01/24 00:52:47 [notice] 1#1: start worker process 32
+2024/01/24 00:52:47 [notice] 1#1: start worker process 33
+2024/01/24 00:52:47 [notice] 1#1: start worker process 34
+2024/01/24 00:52:47 [notice] 1#1: start worker process 35
+2024/01/24 00:52:47 [notice] 1#1: start worker process 36
+2024/01/24 00:53:20 [error] 29#29: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET / HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:53:20 [error] 29#29: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2024/01/24 00:53:21 [error] 29#29: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET / HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:53:21 [error] 29#29: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2024/01/24 00:53:21 [error] 29#29: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET / HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:53:21 [error] 29#29: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2024/01/24 00:54:45 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:54:45 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/menstrual-calendar"
+2024/01/24 00:55:26 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:55:26 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/menstrual-calendar"
+2024/01/24 00:55:27 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:55:27 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/menstrual-calendar"
+2024/01/24 00:55:27 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:55:27 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/menstrual-calendar"
+2024/01/24 00:56:46 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:56:46 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/menstrual-calendar"
+2024/01/24 00:56:47 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:56:47 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/menstrual-calendar"
+2024/01/24 00:56:47 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:56:47 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/menstrual-calendar"
+2024/01/24 00:56:47 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:56:47 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/menstrual-calendar"
+2024/01/24 00:56:47 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /menstrual-calendar HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:56:48 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/menstrual-calendar"
+2024/01/24 00:56:52 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET / HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:56:52 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2024/01/24 00:57:36 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET / HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:57:36 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2024/01/24 00:57:37 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET / HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:57:37 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2024/01/24 00:57:37 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET / HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:57:37 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2024/01/24 00:57:37 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET / HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:57:37 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2024/01/24 00:58:39 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET / HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:58:39 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2024/01/24 00:58:39 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET / HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:58:39 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2024/01/24 00:58:39 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET / HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:58:39 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2024/01/24 00:58:40 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET / HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:58:40 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2024/01/24 00:58:40 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET / HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:58:40 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27; PHP message: PHP Warning:  include(): Failed opening '/var/www/html/src/Infrastructure/Providers/../routesapi.php' for inclusion (include_path='.:/usr/share/php') in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2024/01/24 00:59:35 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  require_once(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET / HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:59:35 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  require_once(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2024/01/24 00:59:36 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  require_once(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET / HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1"
+2024/01/24 00:59:36 [error] 31#31: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  require_once(/var/www/html/src/Infrastructure/Providers/../routesapi.php): Failed to open stream: No such file or directory in /var/www/html/src/Infrastructure/Services/Router/Router.php on line 27" while reading response header from upstream, client: 172.31.0.1, server: api.ciclomenstrual.test, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.31.0.5:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/"

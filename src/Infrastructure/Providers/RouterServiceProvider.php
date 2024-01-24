@@ -27,7 +27,7 @@ class RouterServiceProvider implements ProviderInterface
     {
         $this->router
         ->configure(
-            __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'routes' . 'api.php'
+            __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'routes' . DIRECTORY_SEPARATOR .  'api.php'
         )
         ->handle();
     }

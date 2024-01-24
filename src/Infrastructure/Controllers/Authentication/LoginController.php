@@ -47,7 +47,7 @@ class LoginController
     {
         $body       = $this->getBody($this->request);
         $loginData  = new LoginData($body->email, $body->password);
-
+        dd($body);
         $user = $this->login->authenticate($loginData);
 
         $message = $user
