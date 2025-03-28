@@ -1,6 +1,6 @@
 {
     "name": "lunny/back-app-ciclo-menstrual",
-    "version": "1.0.0"
+    "version": "1.0.0",
     "description": "Backend da aplicação de calendário de ciclo menstrual",
     "license": "MIT",
     "autoload": {
